@@ -1,0 +1,19 @@
+DA-015 Data Cleaning Log
+========================================
+Raw dataset: 1012 rows x 13 columns
+Missing values in raw data: time_spent_hours=32, activity_count=50, last_active_days=20
+course_module: standardised 8 inconsistent label(s); 0 unrecognised value(s)
+device_type: standardised 8 inconsistent label(s); 0 unrecognised value(s)
+completion_status: standardised 8 inconsistent label(s); 0 unrecognised value(s)
+age_group: standardised 0 inconsistent label(s); 0 unrecognised value(s)
+Removed 12 exact duplicate row(s)
+Removed 0 additional duplicate learner_id row(s)
+quiz_score: 6 invalid value(s) outside 0-100 set to missing (values: [-12.0, -5.0, 101.5, 105.0, 120.0, 150.0])
+lessons_completed: 4 value(s) greater than lessons_available capped
+videos_watched: 0 value(s) greater than videos_available capped
+time_spent_hours: imputed 30 missing value(s) with module-level median
+quiz_score: imputed 6 missing value(s) with module-level median
+activity_count: imputed 50 missing value(s) with module-level median
+last_active_days: imputed 20 missing value(s) with module-level median
+Cleaned dataset: 1000 rows; remaining missing values = 0
+Saved cleaned data -> dataset/online_learning_cleaned.csv

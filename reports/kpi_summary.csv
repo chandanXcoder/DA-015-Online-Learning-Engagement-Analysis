@@ -1,0 +1,16 @@
+metric,value
+total_learners,1000.0
+completed_learners,210.0
+completion_rate_pct,21.0
+dropout_rate_pct,31.1
+in_progress_pct,47.9
+avg_quiz_score,53.3
+median_quiz_score,53.8
+total_learning_hours,17255.6
+avg_learning_hours,17.3
+avg_lesson_progress_pct,57.1
+avg_video_completion_pct,54.7
+avg_activity_count,51.4
+avg_engagement_score,43.0
+inactive_learners,375.0
+inactive_pct,37.5

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devices &amp; Age · DA-015 Learning Analytics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="demographics">
+  <div class="loader"><div class="loader-ring"></div></div>
+
+  <main class="content" id="content">
+    <div class="toolbar">
+      <div class="seg" id="metricSeg">
+        <button class="active" data-metric="completion_rate_pct">Completion rate</button>
+        <button data-metric="dropout_rate_pct">Dropout rate</button>
+        <button data-metric="avg_quiz_score">Avg quiz score</button>
+        <button data-metric="avg_hours">Avg hours</button>
+        <button data-metric="avg_engagement_score">Engagement score</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">Device type</h2>
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title" id="deviceTitle">Completion rate by device</h3>
+          <p class="card-sub">Use the buttons above to switch the metric</p></div></div>
+        <div class="chart-box"><canvas id="deviceMetric"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Learners by device</h3><p class="card-sub">Share of the cohort</p></div></div>
+        <div class="chart-box"><canvas id="deviceShare"></canvas></div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-head"><div><h3 class="card-title">Device summary</h3></div></div>
+      <div class="table-wrap"><table class="data" id="deviceTable"></table></div>
+    </div>
+
+    <h2 class="section-title">Age group</h2>
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title" id="ageTitle">Completion rate by age group</h3>
+          <p class="card-sub">Use the buttons above to switch the metric</p></div></div>
+        <div class="chart-box"><canvas id="ageMetric"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Learners by age group</h3><p class="card-sub">Share of the cohort</p></div></div>
+        <div class="chart-box"><canvas id="ageShare"></canvas></div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-head"><div><h3 class="card-title">Age-group summary</h3></div></div>
+      <div class="table-wrap"><table class="data" id="ageTable"></table></div>
+    </div>
+
+    <h2 class="section-title">Device × module</h2>
+    <div class="card">
+      <div class="card-head"><div><h3 class="card-title">Completion rate by device and module</h3>
+        <p class="card-sub">Darker = higher completion · n = learners in each cell (small cells are less reliable)</p></div></div>
+      <div class="heatmap" id="crossHeat"></div>
+    </div>
+  </main>
+
+  <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/pages/demographics.js"></script>
+</body>
+</html>

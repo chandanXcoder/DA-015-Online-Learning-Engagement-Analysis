@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engagement · DA-015 Learning Analytics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="engagement">
+  <div class="loader"><div class="loader-ring"></div></div>
+
+  <main class="content" id="content">
+    <div class="grid g-1-2">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">How the engagement score works</h3>
+          <p class="card-sub">Transparent weighted formula (weights set in <code>src/config.py</code>)</p></div></div>
+        <div class="formula" id="formula"></div>
+        <div class="weights" id="weights"></div>
+        <div class="legend-pills" id="thresholds"></div>
+        <p class="card-sub" style="margin-top:14px" id="formulaNote"></p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Engagement score distribution</h3>
+          <p class="card-sub">Number of learners per 5-point score band, coloured by category</p></div></div>
+        <div class="chart-box tall"><canvas id="scoreHist"></canvas></div>
+      </div>
+    </div>
+
+    <div class="kpi-grid k3" id="engKpis"></div>
+
+    <h2 class="section-title">Does engagement relate to outcomes?</h2>
+    <div class="grid g3">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Completion rate</h3><p class="card-sub">by engagement category</p></div></div>
+        <div class="chart-box short"><canvas id="outComp"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Average quiz score</h3><p class="card-sub">by engagement category</p></div></div>
+        <div class="chart-box short"><canvas id="outQuiz"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Inactive &gt; 30 days</h3><p class="card-sub">% of learners, by engagement category</p></div></div>
+        <div class="chart-box short"><canvas id="outInactive"></canvas></div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Engagement mix by module</h3>
+          <p class="card-sub">100% stacked · share of Low / Medium / High learners</p></div></div>
+        <div class="chart-box"><canvas id="engModule"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Engagement score vs quiz score</h3>
+          <p class="card-sub">Each dot is one learner, coloured by engagement category</p></div></div>
+        <div class="chart-box"><canvas id="engScatter"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div><h3 class="card-title">Correlation heatmap</h3>
+        <p class="card-sub">Pearson correlation between engagement and performance metrics · hover a cell for details</p></div></div>
+      <div class="heatmap" id="heatmap"></div>
+      <p class="card-sub" id="corrNote" style="margin-top:12px"></p>
+    </div>
+  </main>
+
+  <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/pages/engagement.js"></script>
+</body>
+</html>

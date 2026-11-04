@@ -1,0 +1,20 @@
+column,source,data_type,description,valid_values
+learner_id,Raw,Text,Artificial unique learner identifier (no personal data),L0001 - L1000
+age_group,Raw,Category,Learner age band,"18-24, 25-34, 35-44, 45+"
+course_module,Raw,Category,Course module enrolled in,"Python, Java, SQL, Web Development, Data Analytics"
+device_type,Raw,Category,Main device used for learning,"Laptop, Mobile, Desktop, Tablet"
+time_spent_hours,Raw,Decimal,Total learning time on the platform (hours),>= 0
+videos_watched,Raw,Integer,Number of course videos watched,0 - videos_available
+videos_available,Raw,Integer,Number of videos in the module,> 0
+lessons_completed,Raw,Integer,Number of lessons completed,0 - lessons_available
+lessons_available,Raw,Integer,Number of lessons in the module,> 0
+quiz_score,Raw,Decimal,Average quiz score (%),0 - 100
+completion_status,Raw,Category,Course status,"Completed, In Progress, Dropped"
+activity_count,Raw,Integer,"Platform interactions (logins, posts, submissions)",>= 0
+last_active_days,Raw,Integer,Days since the learner was last active,>= 0
+video_completion_pct,Derived,Decimal,videos_watched / videos_available x 100,0 - 100
+lesson_progress_pct,Derived,Decimal,lessons_completed / lessons_available x 100,0 - 100
+is_completed,Derived,0/1,1 if completion_status == Completed,"0, 1"
+is_inactive,Derived,0/1,1 if last_active_days > 30,"0, 1"
+engagement_score,Derived,Decimal,"Weighted score of normalised activity, time and lesson progress",0 - 100
+engagement_category,Derived,Category,"Low (<40), Medium (40-69.9), High (>=70)","Low, Medium, High"

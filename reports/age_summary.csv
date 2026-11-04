@@ -1,0 +1,5 @@
+age_group,learners,completion_rate_pct,avg_quiz_score,avg_hours,avg_lesson_progress_pct,avg_activity,avg_engagement_score,dropout_rate_pct
+18-24,385,20.5,53.9,17.8,57.4,51.5,43.7,31.9
+25-34,311,24.4,53.8,17.7,58.7,52.3,44.2,30.5
+35-44,186,18.3,50.8,15.8,53.4,49.1,39.9,33.3
+45+,118,17.8,54.0,16.8,57.6,52.2,42.6,26.3

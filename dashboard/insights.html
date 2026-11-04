@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights · DA-015 Learning Analytics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="insights">
+  <div class="loader"><div class="loader-ring"></div></div>
+
+  <main class="content" id="content">
+    <section class="hero">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <h2>What the data tells us</h2>
+      <p>Each statement below is generated automatically from the calculated results (<code style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff">src/insights.py</code>),
+        so the wording always matches the numbers.</p>
+      <div class="hero-tags" id="heroTags"></div>
+    </section>
+
+    <h2 class="section-title">Key insights</h2>
+    <div class="insight-grid" id="insights"></div>
+
+    <h2 class="section-title">Recommendations</h2>
+    <div class="insight-grid" id="recs"></div>
+
+    <div class="toolbar" style="margin-top:24px">
+      <button class="btn" id="printBtn">Print / save as PDF</button>
+      <a class="btn" href="learners.html#engagement=Low">View low-engagement learners</a>
+    </div>
+  </main>
+
+  <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/pages/insights.js"></script>
+</body>
+</html>

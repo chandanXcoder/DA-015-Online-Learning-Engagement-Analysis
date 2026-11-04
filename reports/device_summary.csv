@@ -1,0 +1,5 @@
+device_type,learners,completion_rate_pct,avg_quiz_score,avg_hours,avg_lesson_progress_pct,avg_activity,avg_engagement_score,dropout_rate_pct
+Desktop,172,24.4,54.3,18.3,60.1,52.8,45.6,23.3
+Laptop,422,22.5,53.3,17.4,59.2,52.0,44.2,29.9
+Tablet,88,21.6,53.3,17.9,55.0,51.2,42.6,35.2
+Mobile,318,17.0,52.8,16.3,53.3,49.9,40.2,35.8

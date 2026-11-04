@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview · DA-015 Learning Analytics</title>
+  <meta name="description" content="DA-015 Online Learning Engagement Analysis dashboard">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="overview">
+  <div class="loader"><div class="loader-ring"></div></div>
+
+  <main class="content" id="content">
+    <section class="hero">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <h2>Online Learning Engagement Analysis</h2>
+      <p id="heroText">How do learners engage with online courses, and what separates those who finish from those who drop out?</p>
+      <div class="hero-tags" id="heroTags"></div>
+    </section>
+
+    <div class="kpi-grid" id="kpis"></div>
+
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Completion rate by module</h3>
+          <p class="card-sub">Share of learners in each module who completed the course</p></div></div>
+        <div class="chart-box"><canvas id="moduleCompletion"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Completion status</h3>
+          <p class="card-sub">All learners</p></div></div>
+        <div class="chart-box"><canvas id="statusDonut"></canvas></div>
+      </div>
+    </div>
+
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Learning hours vs quiz score</h3>
+          <p class="card-sub" id="scatterSub">Each dot is one learner · dashed line = linear trend</p></div></div>
+        <div class="chart-box tall"><canvas id="hoursScatter"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Key highlights</h3>
+          <p class="card-sub">Calculated from the cleaned dataset</p></div></div>
+        <div class="highlights" id="highlights"></div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Average quiz score by module</h3>
+          <p class="card-sub">Mean quiz score (0–100)</p></div></div>
+        <div class="chart-box"><canvas id="moduleQuiz"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 class="card-title">Engagement categories</h3>
+          <p class="card-sub">Learners per engagement level and their completion rate</p></div></div>
+        <div class="chart-box"><canvas id="engagementBars"></canvas></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/pages/overview.js"></script>
+</body>
+</html>

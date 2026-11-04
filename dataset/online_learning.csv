@@ -1,0 +1,1013 @@
+learner_id,age_group,course_module,device_type,time_spent_hours,videos_watched,videos_available,lessons_completed,lessons_available,quiz_score,completion_status,activity_count,last_active_days
+L0632,35-44,Web Development,Desktop,5.3,3,75,5,50,29.1,Dropped,8.0,70.0
+L0635,18-24,Python,Mobile,5.8,39,60,19,40,37.2,In Progress,30.0,21.0
+L0964,18-24,Python,Mobile,8.8,21,60,12,40,60.7,Dropped,30.0,105.0
+L0626,25-34,SQL,Laptop,,35,45,22,30,56.4,In Progress,46.0,2.0
+L0366,25-34,data analytics,Desktop,8.1,28,60,19,40,50.7,In Progress,43.0,4.0
+L0721,25-34,Web Development,Laptop,8.3,25,75,11,50,47.9,In Progress,24.0,2.0
+L0751,18-24,Java,Mobile,3.2,20,70,6,45,120.0,Dropped,5.0,46.0
+L0534,25-34,Python,Mobile,46.2,50,60,40,40,75.6,Completed,132.0,22.0
+L0520,35-44,Data Analytics,Laptop,0.5,7,55,4,35,34.6,Dropped,19.0,112.0
+L0071,18-24,Python,Laptop,18.1,36,60,27,40,54.7,In Progress,60.0,10.0
+L0946,18-24,Python,Mobile,5.6,8,60,7,40,23.3,In Progress,12.0,0.0
+L0437,18-24,Web Development,Mobile,47.3,53,75,36,50,60.4,In Progress,59.0,2.0
+L0959,25-34,SQL,Laptop,4.3,12,45,7,30,36.1,Dropped,16.0,104.0
+L0441,35-44,Java,Laptop,23.9,47,70,26,45,60.5,In Progress,53.0,4.0
+L0250,25-34,SQL,Mobile,23.7,32,45,23,30,68.6,In Progress,81.0,1.0
+L0616,35-44,Web Development,Tablet,39.3,51,75,35,50,58.7,In Progress,52.0,30.0
+L0645,25-34,SQL,Laptop,20.3,45,45,30,30,70.2,Completed,85.0,27.0
+L0553,18-24,Java,Mobile,9.3,42,70,26,45,39.5,In Progress,60.0,10.0
+L0550,25-34,Python,Laptop,7.7,19,60,13,40,38.7,In Progress,30.0,11.0
+L0102,25-34,Web Development,Laptop,21.7,75,75,50,50,81.5,Completed,116.0,26.0
+L0266,18-24,Python,Laptop,30.8,46,60,40,40,85.4,in progress,89.0,7.0
+L0732,18-24,SQL ,Mobile,20.9,27,45,19,30,67.1,In Progress,42.0,3.0
+L0214,35-44,Python,Desktop,20.8,31,60,30,40,71.0,In Progress,80.0,1.0
+L0605,45+,Web Development,Mobile,45.1,65,75,50,50,59.0,Completed,74.0,25.0
+L0598,25-34,Web Development,Mobile,6.0,21,75,10,50,42.1,In Progress,15.0,2.0
+L0255,18-24,Java,Laptop,24.2,51,70,34,45,55.0,In Progress,,17.0
+L0831,25-34,Data Analytics,Mobile,16.0,47,55,35,35,66.5,Completed,74.0,16.0
+L0290,18-24,SQL,Laptop,10.9,22,45,14,30,44.5,In Progress,45.0,20.0
+L0555,18-24,Data Analytics,Laptop,35.1,49,55,35,35,74.0,Completed,94.0,28.0
+L0890,25-34,Python,Laptop,17.8,32,60,18,40,46.1,Dropped,37.0,33.0
+L0469,18-24,Python,Mobile,8.9,30,60,14,40,64.8,In Progress,27.0,8.0
+L0351,25-34,SQL,Laptop,16.9,30,45,20,30,54.2,In Progress,70.0,16.0
+L0097,18-24,Data Analytics,tablet,6.6,24,55,16,35,45.1,Dropped,37.0,38.0
+L0545,18-24,Data Analytics,Tablet,15.7,41,55,26,35,59.8,In Progress,71.0,21.0
+L0992,35-44,Web Development,Laptop,16.9,64,75,35,50,67.0,In Progress,57.0,1.0
+L0077,18-24,SQL,Desktop,18.9,26,45,16,30,55.8,In Progress,53.0,6.0
+L0299,35-44,Java,Mobile,26.9,61,70,45,45,78.1,Completed,90.0,17.0
+L0210,25-34,Python,Laptop,17.0,33,60,20,40,37.6,In Progress,41.0,3.0
+L0704,35-44,Data Analytics,Laptop,20.9,30,55,16,35,42.4,In Progress,49.0,1.0
+L0159,35-44,Data Analytics,Laptop,30.9,46,55,35,35,71.9,Completed,97.0,6.0
+L0501,35-44,Web Development,Desktop,21.5,70,75,50,50,87.0,Completed,106.0,16.0
+L0276,25-34,SQL,Mobile,39.0,43,45,30,30,75.3,Completed,101.0,4.0
+L0335,18-24,SQL,Laptop,29.7,45,45,30,30,68.9,Completed,104.0,23.0
+L0599,45+,Data Analytics,Laptop,,21,55,18,35,48.8,In Progress,44.0,9.0
+L0782,45+,Data Analytics,Laptop,20.3,48,55,27,35,62.7,In Progress,62.0,21.0
+L0706,25-34,Java,Mobile,7.8,21,70,14,45,41.7,Dropped,20.0,44.0
+L0487,25-34,Java,Laptop,37.8,59,70,45,45,62.2,Completed,84.0,9.0
+L0661,18-24,SQL,Mobile,8.8,17,45,15,30,60.1,In Progress,51.0,10.0
+L0888,18-24,Python,Laptop,25.2,28,60,24,40,48.2,In Progress,52.0,6.0
+L0882,25-34,Java,Laptop,15.7,52,70,28,45,50.4,In Progress,54.0,23.0
+L0446,35-44,Data Analytics,Tablet,7.5,25,55,17,35,56.0,Dropped,,94.0
+L0322,25-34,Python,Mobile,22.9,60,60,40,40,76.8,Completed,99.0,19.0
+L0060,18-24,SQL,Desktop,14.2,45,45,30,30,71.0,Completed,90.0,36.0
+L0630,35-44,Python,Laptop,5.1,20,60,11,40,51.7,In Progress,25.0,3.0
+L0933,25-34,Python,Mobile,3.3,8,60,8,40,48.4,Dropped,17.0,116.0
+L0334,35-44,Data Analytics,Laptop,2.9,12,55,5,35,40.5,In Progress,17.0,3.0
+L0750,35-44,Data Analytics,Laptop,19.3,43,55,28,35,63.7,In Progress,78.0,11.0
+L0055,35-44,Web Development,Laptop,32.4,52,75,36,50,66.3,In Progress,72.0,23.0
+L0024,45+,SQL,Desktop,8.8,35,45,22,30,59.1,In Progress,50.0,2.0
+L0031,35-44,SQL,Laptop,0.5,3,45,1,30,26.3,Dropped,8.0,72.0
+L0347,45+,Java,Laptop,8.6,16,70,10,45,32.8,In Progress,26.0,0.0
+L0434,35-44,Java,Desktop,19.8,51,70,30,45,49.0,In Progress,59.0,29.0
+L0011,18-24,SQL,Laptop,38.6,45,45,30,30,69.7,Completed,99.0,28.0
+L0689,35-44,Web Development,Laptop,4.4,37,75,15,50,28.7,In Progress,29.0,5.0
+L0245,25-34,Web Development,Mobile,2.9,17,75,10,50,8.2,Dropped,19.0,55.0
+L0315,18-24,Java,Desktop,19.0,17,70,11,45,34.0,Dropped,18.0,92.0
+L0450,25-34,Python,Tablet,0.8,9,60,4,40,29.9,Dropped,21.0,41.0
+L0200,18-24,Python,Mobile,4.5,17,60,11,40,56.7,Dropped,27.0,47.0
+L0592,25-34,Java,Desktop,7.7,25,70,22,45,52.6,In Progress,50.0,2.0
+L0236,35-44,Web Development,Mobile,18.3,32,75,24,50,48.0,Dropped,50.0,89.0
+L0108,18-24,Python,Laptop,1.2,5,60,2,40,21.3,Dropped,7.0,51.0
+L0219,45+,Java,Mobile,7.7,23,70,11,45,29.4,In Progress,21.0,20.0
+L0425,25-34,Java,Laptop,0.5,9,70,4,45,16.7,Dropped,12.0,119.0
+L0175,18-24,Java,Desktop,22.0,25,70,15,45,34.5,Dropped,27.0,97.0
+L0852,18-24,Java,Desktop,8.1,30,70,18,45,47.2,In Progress,36.0,5.0
+L0523,18-24,Java,Laptop,30.4,56,70,45,45,79.7,Completed,111.0,44.0
+L0295,35-44,Web Development,Desktop,3.0,28,75,8,50,36.3,Dropped,27.0,78.0
+L0943,18-24,Web Development,Laptop,2.1,17,75,4,50,25.0,Dropped,11.0,50.0
+L0040,25-34,SQL,Mobile,24.8,32,45,20,30,51.4,Dropped,45.0,114.0
+L0855,18-24,Web Development,Mobile,19.7,62,75,29,50,56.7,In Progress,59.0,11.0
+L0793,18-24,Web Development,Mobile,,62,75,36,50,70.0,In Progress,76.0,15.0
+L0850,45+,Java,Laptop,15.3,50,70,33,45,57.3,In Progress,78.0,3.0
+L0067,25-34,Web Development,Laptop,13.9,49,75,30,50,43.1,In Progress,54.0,11.0
+L0281,18-24,Web Development,Laptop,12.9,13,75,16,50,39.9,Dropped,19.0,62.0
+L0068,18-24,Data Analytics,Laptop,28.5,55,55,35,35,56.2,Completed,77.0,21.0
+L0779,35-44,Java,Desktop,21.5,39,70,23,45,57.5,In Progress,43.0,1.0
+L0443,35-44,Python,Laptop,12.0,34,60,19,40,54.7,In Progress,37.0,1.0
+L0884,25-34,Python,Laptop,7.3,19,60,13,40,37.2,In Progress,34.0,1.0
+L0300,25-34,Data Analytics,Mobile,20.9,48,55,28,35,86.6,In Progress,89.0,11.0
+L0519,18-24,Python,Mobile,7.9,32,60,19,40,55.2,In Progress,38.0,11.0
+L0333,25-34,Java,Mobile,18.9,42,70,26,45,46.8,In Progress,55.0,6.0
+L0921,18-24,Java,Laptop,14.1,41,70,26,45,47.9,Dropped,55.0,105.0
+L0974,45+,Data Analytics,Mobile,50.8,51,55,35,35,69.6,Completed,92.0,41.0
+L0935,35-44,Data Analytics,Mobile,22.5,40,55,27,35,56.7,completed,74.0,3.0
+L0870,18-24,Java,Mobile,33.6,47,70,30,45,58.9,In Progress,51.0,
+L0925,18-24,SQL,Desktop,5.6,14,45,11,30,59.2,Dropped,31.0,120.0
+L0185,35-44,Web Development,Laptop,10.7,55,75,35,50,52.6,In Progress,,2.0
+L0517,18-24,Web Development,Laptop,43.0,47,75,36,50,61.7,In Progress,63.0,7.0
+L0089,18-24,Java,Laptop,16.5,29,70,23,45,55.6,Dropped,25.0,36.0
+L0064,35-44,Web Development,Desktop,16.0,26,75,18,50,61.5,In Progress,39.0,2.0
+L0837,35-44,Data Analytics,Desktop,16.5,32,55,18,35,48.8,Dropped,42.0,40.0
+L0579,35-44,Data Analytics,Laptop,12.3,31,55,15,35,63.3,In Progress,45.0,0.0
+L0216,35-44,Java,Desktop,3.6,24,70,15,45,44.7,In Progress,31.0,12.0
+L0755,25-34,Data Analytics,Tablet,6.8,10,55,10,35,32.1,In Progress,18.0,10.0
+L0260,25-34,Data Analytics,Tablet,12.4,27,55,16,35,66.6,In Progress,37.0,4.0
+L0382,45+,SQL,Mobile,24.2,41,45,30,30,88.0,Completed,127.0,1.0
+L0381,25-34,Python,Mobile,47.0,59,60,40,40,92.0,Completed,122.0,10.0
+L0894,18-24,Data Analytics,Laptop,4.2,8,55,5,35,29.4,In Progress,14.0,0.0
+L0972,18-24,Python,Desktop,17.5,51,60,40,40,70.6,Completed,82.0,11.0
+L0463,45+,SQL,Mobile,0.5,4,45,4,30,20.9,In Progress,13.0,6.0
+L0747,18-24,Java,Laptop,5.6,46,70,27,45,48.3,In Progress,55.0,2.0
+L0680,18-24,Java,Tablet,28.1,49,70,28,45,56.1,In Progress,52.0,1.0
+L0758,45+,Web Development,Desktop,16.1,65,75,50,50,72.0,Completed,80.0,17.0
+L0998,18-24,Java,Laptop,7.2,27,70,13,45,50.9,In Progress,,24.0
+L0313,18-24,SQL,Mobile,10.5,36,45,24,30,72.5,In Progress,70.0,3.0
+L0087,35-44,Web Development,Laptop,56.8,54,75,39,50,55.3,In Progress,68.0,18.0
+L0297,45+,Python,Mobile,2.8,6,60,5,40,27.6,In Progress,15.0,7.0
+L0999,45+,SQL,Desktop,26.2,39,45,30,30,81.3,Completed,78.0,4.0
+L0654,18-24,Java,Desktop,25.8,51,70,30,45,79.2,In Progress,55.0,7.0
+L0821,18-24,SQL,Laptop,1.6,0,45,1,30,21.8,In Progress,12.0,24.0
+L0137,45+,SQL,Laptop,11.6,28,45,19,30,69.1,In Progress,49.0,3.0
+L0878,18-24,Data Analytics,Mobile,7.7,34,55,25,35,63.0,In Progress,70.0,6.0
+L0586,25-34,SQL,Laptop,15.7,24,45,23,30,59.7,Dropped,82.0,41.0
+L0731,18-24,Data Analytics,Laptop,32.9,52,55,35,35,71.0,Completed,85.0,
+L0465,25-34,SQL,Mobile,13.3,26,45,18,30,44.8,Dropped,54.0,50.0
+L0623,45+,Python,Laptop,35.3,57,60,40,40,91.0,Completed,139.0,25.0
+L0169,18-24,Data Analytics,Laptop,4.7,6,55,2,35,9.1,Dropped,10.0,118.0
+L0507,18-24,SQL,Mobile,9.4,17,45,13,30,-5.0,In Progress,35.0,10.0
+L0452,45+,Data Analytics,Laptop,19.4,44,55,27,35,58.0,In Progress,63.0,17.0
+L0140,18-24,SQL,Mobile,23.2,40,45,30,30,78.9,Completed,92.0,7.0
+L0688,45+,SQL,Mobile,8.5,14,45,10,30,42.7,Dropped,21.0,74.0
+L0669,18-24,Python,Laptop,18.1,40,60,24,40,65.0,Dropped,44.0,43.0
+L0860,25-34,SQL,Laptop,,40,45,30,30,64.8,Completed,81.0,12.0
+L0913,45+,SQL,Laptop,4.1,13,45,8,30,54.0,In Progress,24.0,6.0
+L0514,18-24,Web Development,Mobile,31.3,64,75,50,50,84.8,Completed,113.0,41.0
+L0536,18-24,Data Analytics,tablet,25.3,49,55,35,35,83.4,DROPPED,117.0,16.0
+L0056,35-44,Java,Desktop,8.6,53,70,33,45,53.8,In Progress,64.0,3.0
+L0121,25-34,Web Development,Laptop,42.8,48,75,37,50,63.3,In Progress,74.0,3.0
+L0533,25-34,Data Analytics,Laptop,6.2,31,55,18,35,51.8,Dropped,39.0,87.0
+L0026,18-24,SQL,Laptop,21.0,26,45,15,30,49.7,In Progress,37.0,1.0
+L0073,35-44,SQL,Mobile,13.7,24,45,22,30,75.0,In Progress,49.0,10.0
+L0045,35-44,Java,Mobile,17.9,36,70,24,45,52.3,In Progress,56.0,4.0
+L0877,25-34,Web Development,Desktop,16.6,23,75,23,50,58.3,In Progress,,7.0
+L0399,25-34,Java,Laptop,7.3,22,70,15,45,31.5,In Progress,28.0,15.0
+L0287,18-24,Data Analytics,Laptop,21.6,55,55,35,35,73.4,Completed,116.0,2.0
+L0362,18-24,Web Development,Tablet,4.2,5,75,4,50,150.0,Dropped,4.0,70.0
+L0320,45+,Web Development,Mobile,25.1,16,75,18,50,42.1,Dropped,23.0,116.0
+L0199,18-24,SQL,Tablet,23.8,40,45,30,30,73.6,Completed,96.0,12.0
+L0848,25-34,Java,Desktop,24.6,59,70,45,45,52.3,Completed,55.0,14.0
+L0787,35-44,Java,Desktop,1.0,1,70,6,45,28.6,In Progress,11.0,21.0
+L0364,18-24,Python,Mobile,4.2,5,60,7,40,24.5,Dropped,20.0,51.0
+L0696,25-34,Java,Desktop,47.5,70,70,45,45,85.7,Completed,164.0,22.0
+L0761,35-44,Python,Mobile,20.8,35,60,27,40,63.3,In Progress,61.0,9.0
+L0238,35-44,Java,Laptop,14.2,8,70,12,45,40.5,Dropped,28.0,98.0
+L0278,25-34,Python,Mobile,48.0,42,60,28,40,55.4,In Progress,60.0,4.0
+L0952,18-24,SQL,Mobile,5.6,21,45,12,30,45.2,Dropped,30.0,90.0
+L0319,18-24,Data Analytics,Mobile,16.3,20,55,11,35,42.8,In Progress,25.0,0.0
+L0644,18-24,SQL,Desktop,21.0,41,45,30,30,89.4,Completed,72.0,15.0
+L0328,25-34,Python,Mobile,22.1,24,60,22,40,56.8,In Progress,49.0,2.0
+L0061,25-34,Data Analytics,Tablet,23.3,45,55,35,35,79.4,Completed,90.0,42.0
+L0389,18-24,Data Analytics,Desktop,16.7,46,55,35,35,64.2,Completed,66.0,19.0
+L0479,25-34,Python,Mobile,15.7,27,60,13,40,39.6,Dropped,31.0,47.0
+L0604,35-44,SQL,Tablet,21.0,40,45,30,30,78.2,Completed,82.0,25.0
+L0451,18-24,Data Analytics,Tablet,19.9,45,55,23,35,70.0,In Progress,75.0,8.0
+L0826,18-24,Data Analytics,Tablet,5.6,23,55,10,35,41.3,Dropped,29.0,85.0
+L0378,25-34,Python,Laptop,20.7,28,60,12,40,29.9,In Progress,21.0,10.0
+L0947,35-44,SQL,Laptop,2.8,12,45,9,30,54.4,Dropped,19.0,49.0
+L0637,25-34,Java,Laptop,27.0,47,70,28,45,47.1,In Progress,61.0,2.0
+L0698,25-34,SQL,Mobile,12.7,23,45,18,30,48.6,Dropped,52.0,
+L0991,25-34,SQL,Tablet,4.1,14,45,11,30,57.8,In Progress,35.0,30.0
+L0797,18-24,Data Analytics,Mobile,5.9,22,55,15,35,55.8,In Progress,31.0,27.0
+L0549,35-44,SQL,Laptop,7.2,26,45,18,30,55.9,In Progress,51.0,16.0
+L0724,45+,Java,Laptop,7.0,25,70,9,45,105.0,Dropped,21.0,89.0
+L0842,35-44,Web Development,Laptop,28.0,57,75,50,50,59.5,Completed,91.0,41.0
+L0111,25-34,Java,Laptop,1.9,4,70,3,45,17.9,In Progress,16.0,7.0
+L0532,35-44,Data Analytics,Mobile,6.8,13,55,15,35,38.0,In Progress,37.0,1.0
+L0494,18-24,Web Development,Laptop,35.6,42,75,26,50,56.3,Dropped,47.0,58.0
+L0883,45+,SQL,Laptop,6.8,19,45,15,30,40.0,In Progress,30.0,5.0
+L0261,18-24,Python,Laptop,37.3,47,60,28,40,55.9,In Progress,77.0,1.0
+L0480,25-34,Python,Laptop,18.7,56,60,40,40,85.0,Completed,80.0,
+L0812,18-24,Java,Laptop,17.3,66,70,45,45,68.1,Completed,117.0,11.0
+L0478,25-34,Python,Tablet,16.1,30,60,18,40,26.3,In Progress,26.0,0.0
+L0433,25-34,Python,Desktop,9.2,19,60,9,40,39.1,Dropped,25.0,68.0
+L0791,18-24,Data Analytics,Tablet,55.3,43,55,35,35,83.9,Completed,94.0,14.0
+L0741,18-24,Python,Laptop,14.4,26,60,14,40,33.8,Dropped,30.0,42.0
+L0529,35-44,Python,Mobile,17.9,24,60,19,40,50.8,In Progress,39.0,6.0
+L0737,18-24,SQL,Laptop,6.7,20,45,8,30,37.1,In Progress,21.0,14.0
+L0138,25-34,Python,Tablet,15.6,41,60,27,40,60.0,In Progress,87.0,0.0
+L0953,18-24,Data Analytics,Mobile,7.7,12,55,2,35,20.6,Dropped,8.0,79.0
+L0372,18-24,Data Analytics,Mobile,22.1,45,55,26,35,53.0,In Progress,70.0,3.0
+L0949,35-44,SQL,Mobile,11.4,24,45,18,30,69.7,In Progress,46.0,6.0
+L0759,18-24,Java,Laptop,20.9,55,70,35,45,60.3,In Progress,,5.0
+L0248,25-34,Python,Mobile,4.4,17,60,10,40,43.4,In Progress,28.0,3.0
+L0929,25-34,Python,Mobile,15.1,37,60,25,40,69.3,In Progress,,7.0
+L0324,25-34,Web Development,Mobile,21.4,63,75,40,50,61.0,In Progress,69.0,12.0
+L0466,25-34,Python,Laptop,9.9,60,60,40,40,84.4,Completed,,40.0
+L0209,18-24,Java,Desktop,22.7,15,70,26,45,49.0,In Progress,41.0,3.0
+L0707,35-44,Web Development,Mobile,17.5,40,75,33,50,57.0,In Progress,62.0,1.0
+L0668,45+,Data Analytics,Mobile,10.2,45,55,26,35,63.9,In Progress,55.0,10.0
+L0211,25-34,Web Development,Desktop,42.2,60,75,32,50,58.8,In Progress,38.0,1.0
+L0583,18-24,Java,Mobile,4.9,12,70,8,45,27.1,Dropped,20.0,60.0
+L0079,25-34,Java,Tablet,30.8,64,70,45,45,76.5,Completed,104.0,27.0
+L0030,25-34,Java,Laptop,7.1,51,70,28,45,48.7,In Progress,43.0,9.0
+L0873,45+,Data Analytics,Laptop,25.5,49,55,27,35,72.8,Dropped,80.0,36.0
+L0910,18-24,Java,Tablet,0.5,7,70,1,45,6.1,Dropped,13.0,60.0
+L0828,18-24,Data Analytics,Laptop,31.5,34,55,24,35,49.4,Dropped,55.0,84.0
+L0651,25-34,Data Analytics,Mobile,,44,55,35,35,70.6,Completed,103.0,20.0
+L0293,45+,Java,Laptop,16.7,48,70,45,45,72.9,Completed,137.0,43.0
+L0166,18-24,Data Analytics,Desktop,19.9,38,55,26,35,58.6,In Progress,71.0,1.0
+L0568,18-24,Web Development,Tablet,33.4,55,75,37,50,62.9,Dropped,51.0,50.0
+L0843,25-34,Web Development,Mobile,25.7,29,75,17,50,41.8,In Progress,35.0,4.0
+L0468,45+,Web Development,Desktop,0.5,5,75,2,50,11.0,Dropped,7.0,96.0
+L0066,25-34,SQL,Mobile,11.1,42,45,30,30,93.2,Completed,76.0,4.0
+L0142,25-34,Data Analytics,Laptop,18.7,55,55,35,35,79.3,Completed,85.0,23.0
+L0988,18-24,Web Development,Desktop,25.1,45,75,32,50,43.4,In Progress,66.0,18.0
+L0838,45+,Data Analytics,Laptop,21.3,41,55,35,35,73.2,Completed,97.0,26.0
+L0686,18-24,SQL,Laptop,15.1,17,45,11,30,46.9,Dropped,26.0,83.0
+L0329,25-34,Python,Tablet,23.6,27,60,23,40,48.1,Dropped,37.0,57.0
+L0812,18-24,Java,Laptop,17.3,66,70,45,45,68.1,Completed,117.0,11.0
+L0528,45+,Data Analytics,Laptop,18.4,36,55,20,35,45.6,Dropped,41.0,108.0
+L0918,18-24,Data Analytics,Mobile,3.6,11,55,6,35,35.5,Dropped,26.0,79.0
+L0596,18-24,Python,Laptop,27.3,29,60,22,40,52.1,In Progress,36.0,24.0
+L0222,25-34,Python,Laptop,31.4,23,60,17,40,54.7,Dropped,36.0,88.0
+L0262,35-44,Data Analytics,Laptop,1.2,0,55,2,35,0.0,Dropped,13.0,117.0
+L0311,25-34,Java,Laptop,10.5,42,70,32,45,62.4,In Progress,69.0,1.0
+L0911,35-44,Python,Mobile,13.3,26,60,17,40,29.9,Dropped,38.0,36.0
+L0308,25-34,Python,Mobile,26.4,31,60,26,40,54.4,Dropped,49.0,101.0
+L0050,18-24,Web Development,Laptop,25.6,74,75,50,50,85.6,Completed,116.0,6.0
+L0752,18-24,Python,Desktop,24.1,26,60,13,40,54.8,In Progress,18.0,2.0
+L0003,35-44,Java,Laptop,23.3,42,70,31,45,63.0,In Progress,71.0,4.0
+L0712,25-34,Python,Mobile,12.1,36,60,24,40,65.0,Dropped,51.0,96.0
+L0356,25-34,Java,Tablet,28.7,62,70,31,45,57.5,In Progress,73.0,23.0
+L0915,45+,SQL,Mobile,19.1,18,45,17,30,56.4,In Progress,28.0,1.0
+L0543,35-44,Data Analytics,Mobile,22.9,32,55,24,35,47.8,In Progress,54.0,8.0
+L0774,35-44,Web Development,Desktop,25.5,52,75,50,50,78.9,Completed,67.0,31.0
+L0627,35-44,Data Analytics,Laptop,0.5,8,55,5,35,30.4,Dropped,23.0,66.0
+L0714,45+,SQL,Mobile,6.7,19,45,11,30,51.7,Dropped,26.0,35.0
+L0584,25-34,Web Development,Laptop,40.2,58,75,35,50,55.8,In Progress,53.0,30.0
+L0034,18-24,Web Development,Mobile,11.5,39,75,19,50,57.7,In Progress,38.0,2.0
+L0032,45+,Python,Laptop,16.4,37,60,25,40,66.4,In Progress,57.0,11.0
+L0232,25-34,Python,Laptop,27.3,51,60,40,40,69.1,Completed,59.0,19.0
+L0757,18-24,Data Analytics, Laptop ,,31,55,19,35,37.9,Dropped,38.0,53.0
+L0193,18-24,Java,Laptop,22.0,48,70,33,45,50.1,In Progress,95.0,17.0
+L0881,25-34,Python,Desktop,34.5,49,60,40,40,66.2,Completed,68.0,45.0
+L0004,25-34,SQL,Mobile,,35,45,24,30,92.5,In Progress,78.0,2.0
+L0205,18-24,SQL,Mobile,3.5,11,45,12,30,32.8,Dropped,41.0,63.0
+L0495,35-44,SQL,Mobile,17.9,41,45,30,30,82.3,Completed,109.0,38.0
+L0582,25-34,SQL,Laptop,1.9,16,45,10,30,43.4,Dropped,20.0,46.0
+L0482,18-24,Data Analytics,Laptop,6.5,28,55,17,35,61.4,Dropped,,50.0
+L0110,45+,Java,Mobile,7.9,16,70,11,45,39.7,In Progress,28.0,8.0
+L0291,35-44,Java,Desktop,3.0,9,70,9,45,32.4,Dropped,27.0,87.0
+L0078,25-34,SQL,Desktop,0.5,1,45,2,30,21.5,Dropped,17.0,112.0
+L0085,18-24,Python,Mobile,32.3,51,60,40,40,66.4,Completed,84.0,44.0
+L0360,25-34,Java,Laptop,7.4,26,70,12,45,44.6,Dropped,30.0,54.0
+L0083,35-44,Java,Laptop,27.1,35,70,30,45,72.3,In Progress,75.0,2.0
+L0257,35-44,Web Development,Laptop,14.1,53,75,37,50,52.6,In Progress,70.0,12.0
+L0353,25-34,Web Development,Mobile,16.7,60,75,38,50,57.6,In Progress,67.0,7.0
+L0371,35-44,Python,Laptop,8.1,18,60,8,40,16.1,Dropped,21.0,73.0
+L0405,45+,Java,Mobile,15.8,27,70,18,45,38.6,Dropped,34.0,69.0
+L0526,18-24,Java,Laptop,10.4,43,70,24,45,37.4,In Progress,44.0,4.0
+L0310,18-24,SQL,Laptop,4.4,15,45,7,30,40.0,Dropped,17.0,58.0
+L0823,18-24,Python,Laptop,36.5,39,60,26,40,45.4,In Progress,53.0,8.0
+L0282,18-24,Java,Desktop,36.1,35,70,24,45,47.5,In Progress,35.0,18.0
+L0006,45+,Python,Mobile,10.6,29,60,17,40,47.0,In Progress,39.0,2.0
+L0409,18-24,SQL,Desktop,13.1,27,45,12,30,40.5,In Progress,23.0,6.0
+L0671,18-24,Web Development,Laptop,14.8,33,75,25,50,47.6,In Progress,28.0,8.0
+L0098,18-24,Data Analytics,Laptop,23.5,46,55,35,35,52.2,Completed,87.0,35.0
+L0306,25-34,Python,Mobile,19.4,20,60,13,40,39.6,In Progress,24.0,6.0
+L0363,18-24,Data Analytics,Tablet,18.0,26,55,21,35,-12.0,In Progress,56.0,26.0
+L0899,18-24,Web Development,Laptop,4.3,7,75,7,50,49.3,Dropped,8.0,116.0
+L0267,18-24,Web Development,Tablet,29.3,25,75,23,50,61.3,In Progress,37.0,26.0
+L0426,35-44,SQL,Laptop,5.4,20,45,10,30,41.2,In Progress,21.0,4.0
+L0763,18-24,Java,Mobile,41.5,62,70,45,45,67.4,Completed,94.0,35.0
+L0307,25-34,Java,Laptop,2.8,9,70,5,45,9.9,Dropped,13.0,119.0
+L0927,18-24,Web Development,Laptop,3.9,15,75,5,50,43.6,Dropped,15.0,73.0
+L0498,25-34,Data Analytics,Laptop,13.1,33,55,21,35,52.1,Dropped,43.0,65.0
+L0119,25-34,SQL,Tablet,25.9,34,45,30,30,72.5,Completed,89.0,39.0
+L0784,25-34,Data Analytics,Mobile,3.5,11,55,7,35,21.8,Dropped,20.0,101.0
+L0251,25-34,SQL,Mobile,5.7,31,45,19,30,68.1,In Progress,45.0,5.0
+L0352,18-24,Web Development,Desktop,7.9,34,75,18,50,47.0,Dropped,20.0,78.0
+L0010,25-34,Web Development,Mobile,24.6,37,75,21,50,54.2,In Progress,31.0,7.0
+L0197,25-34,Java,Laptop,13.0,15,70,11,45,21.4,In Progress,18.0,6.0
+L0612,25-34,Data Analytics,Mobile,14.8,25,55,15,35,49.1,Dropped,28.0,102.0
+L0082,25-34,Python,Laptop,12.6,19,60,14,40,42.9,In Progress,26.0,7.0
+L0383,35-44,Data Analytics,Laptop,6.6,3,55,6,35,21.0,Dropped,,111.0
+L0484,18-24,Java,Laptop,9.2,22,70,15,45,41.7,In Progress,32.0,7.0
+L0681,18-24,Python,Desktop,10.0,42,60,28,40,73.4,In Progress,54.0,4.0
+L0240,18-24,Data Analytics,Desktop,24.0,36,55,23,35,57.4,In Progress,55.0,3.0
+L0904,25-34,Web Development,Desktop,6.9,27,75,18,50,57.3,In Progress,34.0,18.0
+L0212,25-34,Web Development,Laptop,41.3,28,75,27,50,41.3,In Progress,44.0,1.0
+L0907,25-34,Web Development,Mobile,33.3,71,75,37,50,57.7,In Progress,72.0,8.0
+L0531,25-34,Data Analytics,Laptop,11.5,36,55,14,35,35.7,In Progress,26.0,2.0
+L0785,45+,Data Analytics,Laptop,11.9,30,55,20,35,46.9,In Progress,51.0,1.0
+L0228,25-34,Data Analytics,Desktop,21.6,22,55,18,35,67.6,In Progress,54.0,14.0
+L0867,35-44,Java,Laptop,13.6,26,70,21,45,54.2,In Progress,37.0,10.0
+L0345,35-44,SQL,Laptop,34.9,45,45,30,30,64.5,Completed,106.0,11.0
+L0807,25-34,Java,Mobile,3.5,8,70,6,45,39.3,Dropped,8.0,118.0
+L0934,35-44,SQL,Laptop,11.4,26,45,13,30,43.8,In Progress,40.0,0.0
+L0429,18-24,Web Development,Laptop,19.2,43,75,23,50,52.6,In Progress,34.0,6.0
+L0542,25-34,Data Analytics,Desktop,22.5,50,55,35,35,75.1,Completed,112.0,45.0
+L0969,25-34,Web Development,Mobile,11.4,4,75,9,50,38.7,Dropped,9.0,118.0
+L0738,18-24,Python,Laptop,22.0,47,60,40,40,57.9,Completed,75.0,44.0
+L0653,25-34,Data Analytics,Desktop,14.3,47,55,35,35,84.8,Completed,131.0,25.0
+L0008,35-44,Python,Mobile,18.2,17,60,14,40,53.4,Dropped,34.0,87.0
+L0156,25-34,SQL,Laptop,42.0,45,45,30,30,82.4,Completed,106.0,10.0
+L0548,18-24,SQL,Mobile,17.7,40,45,30,30,93.1,Completed,130.0,7.0
+L0546,25-34,Java,Laptop,20.7,70,70,45,45,74.1,Completed,109.0,32.0
+L0603,45+,Web Development,Desktop,48.0,48,75,39,50,57.8,In Progress,72.0,4.0
+L0781,18-24,Java,Mobile,4.0,15,70,9,45,30.4,In Progress,16.0,8.0
+L0788,18-24,Python,Desktop,25.5,60,60,40,40,63.5,Completed,85.0,29.0
+L0573,25-34,Web Development,Laptop,25.1,56,75,34,50,60.1,In Progress,58.0,7.0
+L0588,18-24,Java,Laptop,44.3,43,70,31,45,52.3,In Progress,65.0,1.0
+L0585,45+,Java,Mobile,3.1,19,70,10,45,28.2,In Progress,27.0,1.0
+L0945,25-34,Data Analytics,Mobile,5.9,12,55,7,35,27.6,Dropped,22.0,114.0
+L0810,45+,Python,Desktop,23.8,43,60,31,40,59.1,In Progress,63.0,12.0
+L0423,18-24,Python,Mobile,7.8,32,60,22,40,63.7,In Progress,55.0,2.0
+L0537,25-34,Java,Tablet,10.7,27,70,17,45,45.2,In Progress,34.0,0.0
+L0590,18-24,Java,Mobile,16.2,39,70,26,45,55.9,In Progress,63.0,14.0
+L0717,25-34,SQL,Laptop,26.9,38,45,30,30,66.1,Completed,72.0,40.0
+L0936,18-24,Java,Tablet,16.6,50,70,27,45,46.4,In Progress,55.0,3.0
+L0835,35-44,Java,Mobile,19.1,62,70,45,45,70.3,Completed,121.0,40.0
+L0229,25-34,Java,Laptop,16.7,16,70,14,45,25.9,In Progress,30.0,0.0
+L0358,35-44,Java,Laptop,7.3,19,70,12,45,35.2,In Progress,22.0,22.0
+L0738,18-24,Python,Laptop,22.0,47,60,40,40,57.9,Completed,75.0,44.0
+L0213,18-24,Web Development,Tablet,16.5,35,75,17,50,52.6,In Progress,24.0,1.0
+L0080,35-44,Python,Desktop,9.0,57,60,40,40,84.6,Completed,82.0,8.0
+L0149,25-34,Data Analytics,Desktop,,2,55,5,35,50.6,In Progress,9.0,22.0
+L0303,25-34,SQL,Laptop,14.8,27,45,16,30,58.1,Dropped,49.0,99.0
+L0530,18-24,SQL,Mobile,8.8,34,45,20,30,72.7,Dropped,,54.0
+L0332,18-24,Data Analytics,Tablet,9.6,25,55,15,35,46.6,In Progress,40.0,3.0
+L0514,18-24,Web Development,Mobile,31.3,64,75,50,50,84.8,Completed,113.0,41.0
+L0799,35-44,Web Development,Laptop,5.6,52,75,37,50,53.0,In Progress,80.0,0.0
+L0892,45+,SQL,Desktop,14.7,34,45,21,30,70.4,In Progress,70.0,4.0
+L0343,35-44,SQL,Laptop,22.0,33,45,21,30,51.8,Dropped,57.0,48.0
+L0134,18-24,Java,Mobile,21.6,50,70,30,45,65.8,In Progress,74.0,20.0
+L0811,18-24,SQL,Tablet,1.2,9,45,6,30,48.0,Dropped,18.0,108.0
+L0312,25-34,Python,Mobile,,18,60,19,40,58.1,In Progress,51.0,1.0
+L0661,18-24,SQL,Mobile,8.8,17,45,15,30,60.1,In Progress,51.0,10.0
+L0448,25-34,Web Development,Tablet,9.1,15,75,11,50,41.9,Dropped,19.0,34.0
+L0001,35-44,Data Analytics,Mobile,9.4,12,55,11,35,65.1,In Progress,40.0,8.0
+L0317,18-24,Python,Desktop,21.3,19,60,19,40,60.6,Dropped,38.0,50.0
+L0716,18-24,SQL,Laptop,18.1,33,45,20,30,63.7,In Progress,53.0,4.0
+L0836,25-34,SQL,Mobile,9.8,24,45,15,30,61.6,Dropped,46.0,112.0
+L0622,25-34,Java,Laptop,23.3,58,70,30,45,54.7,In Progress,58.0,1.0
+L0539,18-24,SQL,Mobile,0.8,9,45,4,30,30.8,Dropped,15.0,54.0
+L0827,25-34,Java,Laptop,12.4,44,70,24,45,39.8,In Progress,53.0,6.0
+L0406,35-44,Data Analytics,Mobile,26.1,36,55,35,35,69.5,Completed,88.0,12.0
+L0173,18-24,Data Analytics,Desktop,6.4,21,55,13,35,31.1,In Progress,23.0,5.0
+L0126,25-34,Java,Mobile,21.3,50,70,32,45,45.3,Dropped,59.0,52.0
+L0658,18-24,Java,Laptop,23.3,70,70,45,45,56.7,Completed,90.0,2.0
+L0502,45+,Python,Mobile,4.8,21,60,15,40,58.5,In Progress,43.0,13.0
+L0559,25-34,Python,DESKTOP,16.7,40,60,29,40,45.4,In Progress,55.0,4.0
+L0914,45+,Java,Mobile,11.8,45,70,30,45,58.7,Dropped,54.0,117.0
+L0091,18-24,Data Analytics,Laptop,18.1,25,55,15,35,49.8,Dropped,25.0,93.0
+L0950,18-24,SQL,Mobile,8.3,30,45,23,30,67.1,In Progress,64.0,9.0
+L0182,45+,Java,Desktop,39.9,65,70,36,45,60.8,In Progress,95.0,5.0
+L0275,25-34,Python,Mobile,20.0,42,60,23,40,53.0,In Progress,48.0,6.0
+L0906,25-34,Data Analytics,Laptop,22.5,34,55,21,35,51.6,In Progress,55.0,23.0
+L0070,25-34,SQL,Mobile,7.4,12,45,11,30,46.8,Dropped,31.0,97.0
+L0292,18-24,Java,Laptop,18.9,49,70,28,45,47.8,Dropped,62.0,45.0
+L0132,45+,Data Analytics,Desktop,7.6,18,55,10,35,41.6,In Progress,24.0,10.0
+L0301,35-44,Java,Mobile,28.4,41,70,24,45,70.9,In Progress,62.0,3.0
+L0431,45+,Python,Mobile,0.5,5,60,3,40,26.4,Dropped,17.0,110.0
+L0327,35-44,Java,Mobile,5.8,32,70,17,45,44.6,In Progress,24.0,30.0
+L0145,25-34,Java,Laptop,9.9,12,70,12,45,39.8,In Progress,25.0,1.0
+L0430,35-44,Java, Laptop ,2.8,6,70,2,45,19.8,Dropped,15.0,54.0
+L0589,18-24,Data Analytics,Mobile,31.7,33,55,25,35,64.9,In Progress,64.0,4.0
+L0967,45+,SQL ,Desktop,14.0,54,70,27,45,47.0,Dropped,,81.0
+L0136,18-24,Web Development,Laptop,63.6,69,75,50,50,69.7,Completed,86.0,33.0
+L0987,18-24,Web Development,Desktop,18.6,44,75,26,50,44.6,In Progress,42.0,
+L0165,25-34,Data Analytics,Desktop,,6,55,7,35,28.5,Dropped,18.0,71.0
+L0029,18-24,SQL,Laptop,5.4,10,45,7,30,29.9,Dropped,21.0,76.0
+L0569,18-24,Java,Laptop,39.6,54,70,45,45,71.5,Completed,92.0,29.0
+L0194,35-44,Java,Mobile,,6,70,6,45,24.4,Dropped,21.0,75.0
+L0395,18-24,SQL,Laptop,12.1,23,45,13,30,50.3,In Progress,40.0,
+L0809,25-34,Web Development,Mobile,12.0,27,75,14,50,45.0,In Progress,32.0,2.0
+L0170,45+,Data Analytics,Desktop,,23,55,15,35,29.2,In Progress,33.0,5.0
+L0496,25-34,Java,Desktop,29.9,61,70,45,45,81.8,Completed,93.0,20.0
+L0141,25-34,Web Development,Desktop,15.8,28,75,24,50,45.5,In Progress,39.0,15.0
+L0174,45+,Web Development,Laptop,29.2,73,75,50,50,77.7,Completed,100.0,4.0
+L0007,35-44,SQL,Mobile,25.9,37,45,30,30,60.4,Completed,91.0,44.0
+L0650,18-24,Java,Laptop,3.4,0,70,4,45,21.4,Dropped,15.0,101.0
+L0486,25-34,Java,Tablet,33.5,66,70,45,45,49.7,Completed,85.0,23.0
+L0074,18-24,Java,Desktop,7.9,8,70,6,45,40.2,Dropped,17.0,66.0
+L0771,18-24,Web Development,Mobile,6.0,15,75,11,50,30.3,Dropped,23.0,86.0
+L0421,25-34,Java,Mobile,15.4,37,70,29,45,53.2,Dropped,67.0,40.0
+L0239,18-24,SQL,Mobile,1.0,3,45,3,30,39.9,Dropped,16.0,113.0
+L0146,18-24,SQL,Mobile,28.3,41,45,30,30,76.0,Completed,136.0,18.0
+L0802,18-24,SQL,Desktop,9.1,18,45,9,30,31.3,Dropped,25.0,61.0
+L0235,45+,SQL,Desktop,19.8,41,45,30,30,67.1,Completed,89.0,28.0
+L0221,18-24,Data Analytics,Laptop,7.8,28,55,16,35,54.1,In Progress,42.0,1.0
+L0483,25-34,Python,Desktop,0.8,6,60,5,40,41.1,Dropped,11.0,56.0
+L0508,35-44,Web Development,Laptop,3.3,3,75,2,50,14.0,Dropped,9.0,88.0
+L0133,25-34,SQL,Mobile,11.1,40,45,30,30,91.8,Completed,94.0,5.0
+L0741,18-24,Python,Laptop,14.4,26,60,14,40,33.8,Dropped,30.0,42.0
+L0515,18-24,Python,Laptop,4.3,22,60,15,40,41.3,Dropped,26.0,99.0
+L0186,25-34,Java,Laptop,6.0,25,70,17,45,37.5,In Progress,41.0,14.0
+L0042,35-44,Data Analytics,Laptop,43.9,48,55,35,35,62.0,Completed,,0.0
+L0619,18-24,Web Development,Laptop,9.7,41,75,25,50,57.8,In Progress,45.0,17.0
+L0109,18-24,Java,Mobile,22.3,46,70,29,45,48.9,Dropped,65.0,101.0
+L0597,35-44,SQL,Laptop,6.1,14,45,12,30,43.5,Dropped,32.0,88.0
+L0057,25-34,Web Development,Tablet,30.7,58,75,50,50,77.2,Completed,72.0,2.0
+L0412,25-34,Python,Laptop,,35,60,27,40,66.2,In Progress,54.0,25.0
+L0449,18-24,Web Development,Laptop,,41,75,22,50,58.1,In Progress,,4.0
+L0576,25-34,Java,Mobile,19.3,55,70,45,45,76.2,completed,111.0,23.0
+L0871,35-44,Java,Mobile,6.7,26,70,20,45,56.3,In Progress,42.0,19.0
+L0025,35-44,Python,Mobile,6.9,12,60,8,40,40.3,Dropped,14.0,42.0
+L0424,18-24,Data Analytics,Laptop,35.5,44,55,28,35,56.2,In Progress,65.0,7.0
+L0535,18-24,Data Analytics,Laptop,14.5,35,55,21,35,37.4,In Progress,50.0,
+L0595,18-24,Java,Desktop,35.4,59,70,45,45,69.3,Completed,86.0,16.0
+L0627,35-44,Data Analytics,Laptop,0.5,8,55,5,35,30.4,Dropped,23.0,66.0
+L0919,18-24,Data Analytics,Laptop,17.0,20,55,17,35,56.7,Dropped,35.0,109.0
+L0937,45+,Web Development,Mobile,47.7,68,75,50,50,78.6,Completed,115.0,39.0
+L0339,18-24,Python,Desktop,13.1,51,60,40,40,65.3,Completed,60.0,23.0
+L0052,18-24,Java,Mobile,3.3,3,70,3,45,19.5,In Progress,11.0,29.0
+L0384,25-34,Java,Mobile,38.8,68,70,45,45,89.7,Completed,129.0,14.0
+L0961,25-34,Data Analytics,Desktop,45.0,41,55,26,35,73.5,In Progress,67.0,24.0
+L0931,18-24,Python,Desktop,44.8,37,60,24,40,49.6,Dropped,63.0,61.0
+L0742,18-24,Python,Laptop,21.5,22,60,14,40,36.9,In Progress,26.0,7.0
+L0265,45+,Python,Laptop,14.2,33,60,25,40,61.2,Dropped,,76.0
+L0544,45+,Java,Tablet,20.8,61,70,33,45,70.4,In Progress,84.0,3.0
+L0902,18-24,Data Analytics,Desktop,3.7,13,55,12,35,45.7,In Progress,41.0,13.0
+L0834,25-34,SQL,Laptop,7.7,23,45,13,30,48.3,Dropped,35.0,49.0
+L0963,18-24,Data Analytics,Laptop,17.2,36,55,25,35,77.6,In Progress,63.0,9.0
+L0524,25-34,SQL,Laptop,10.4,27,45,16,30,60.5,In Progress,52.0,9.0
+L0454,18-24,SQL,Tablet,10.9,38,45,30,30,69.2,Completed,74.0,33.0
+L0019,35-44,Web Development,Laptop,15.0,31,75,21,50,44.9,In Progress,31.0,3.0
+L0903,18-24,Data Analytics,Desktop,25.7,41,55,27,35,61.0,In Progress,84.0,5.0
+L0491,35-44,Java,Laptop,10.1,19,70,8,45,24.1,Dropped,19.0,108.0
+L0581,25-34,Java,Laptop,22.5,40,70,31,45,45.1,In Progress,52.0,9.0
+L0440,25-34,Python,Laptop,28.0,49,60,29,40,54.5,Dropped,71.0,65.0
+L0368,25-34,Python,Laptop,12.7,29,60,17,40,36.4,In Progress,33.0,18.0
+L0084,18-24,Web Development,Laptop,13.3,22,75,19,50,52.8,In Progress,31.0,9.0
+L0062,25-34,SQL,Mobile,20.0,35,45,22,30,60.7,In Progress,67.0,14.0
+L0968,18-24,Java,Mobile,10.3,24,70,10,45,39.5,Dropped,22.0,86.0
+L0273,18-24,Java,Mobile,21.0,52,70,34,45,61.3,In Progress,,2.0
+L0286,25-34,Data Analytics,Desktop,5.7,11,55,10,35,44.9,Dropped,22.0,35.0
+L0361,45+,Web Development,Mobile,90.0,59,75,50,50,83.4,Completed,106.0,11.0
+L0355,25-34,Java,Desktop,18.1,34,70,18,45,35.0,In Progress,37.0,8.0
+L0723,18-24,Python,Laptop,4.6,20,60,12,40,53.4,In Progress,27.0,3.0
+L0279,35-44,Java,Laptop,,21,70,15,45,28.7,In Progress,29.0,7.0
+L0013,25-34,Python,Mobile,,6,60,3,40,14.0,Dropped,11.0,46.0
+L0183,25-34,Web Development,Mobile,8.4,36,75,19,50,46.5,Dropped,24.0,81.0
+L0369,18-24,Python,Mobile,25.1,34,60,26,40,66.4,In Progress,45.0,20.0
+L0500,25-34,Data Analytics,Mobile,17.5,33,55,20,35,56.8,Dropped,30.0,
+L0679,18-24,SQL,Laptop,10.6,33,45,24,30,55.0,In Progress,74.0,14.0
+L0224,45+,SQL,Mobile,15.4,18,45,35,30,50.8,Dropped,21.0,80.0
+L0665,18-24,Java,Desktop,24.4,39,70,29,45,55.9,In Progress,39.0,18.0
+L0708,35-44,Java,Mobile,14.5,24,70,13,45,47.3,In Progress,21.0,30.0
+L0718,18-24,Web Development,Tablet,33.3,36,75,28,50,62.0,In Progress,59.0,9.0
+L0552,18-24,Java,Laptop,31.5,69,70,45,45,84.0,Completed,,41.0
+L0591,45+,Python,Laptop,16.3,52,60,40,40,70.7,Completed,,18.0
+L0617,35-44,Data Analytics,Laptop,44.8,50,55,35,35,79.1,Completed,121.0,35.0
+L0177,25-34,Python,Mobile,37.6,52,60,40,40,78.7,Completed,112.0,36.0
+L0674,35-44,Python,Laptop,7.1,9,60,7,40,36.3,Dropped,17.0,64.0
+L0636,18-24,Python,Mobile,3.6,16,60,11,40,26.6,Dropped,22.0,
+L0594,25-34,Python,Laptop,6.5,39,60,24,40,58.9,In Progress,47.0,3.0
+L0457,45+,Data Analytics,Mobile,15.5,37,55,21,35,62.6,In Progress,70.0,8.0
+L0527,45+,SQL,Desktop,8.5,22,45,19,30,59.8,Dropped,52.0,69.0
+L0394,25-34,Java,Laptop,23.1,41,70,24,45,35.6,In Progress,44.0,
+L0164,18-24,Data Analytics,Laptop,4.4,17,55,7,35,40.7,Dropped,21.0,106.0
+L0249,18-24,Python,Mobile,39.3,54,60,40,40,72.5,Completed,106.0,45.0
+L0847,25-34,Data Analytics,Desktop,13.1,13,55,12,35,49.0,Dropped,31.0,110.0
+L0896,45+,SQL,Tablet,36.3,45,45,30,30,83.6,Completed,85.0,17.0
+L0678,25-34,Data Analytics,Desktop,18.2,47,55,27,35,53.0,In Progress,77.0,5.0
+L0376,18-24,Data Analytics,Desktop,28.9,39,55,28,35,65.4,In Progress,51.0,3.0
+L0413,18-24,Data Analytics,Desktop,9.2,24,55,15,35,47.8,Dropped,40.0,37.0
+L0075,18-24,Web Development,Laptop,10.0,28,75,21,50,57.7,In Progress,33.0,1.0
+L0114,25-34,Data Analytics,Laptop,19.0,48,55,35,35,77.3,Completed,103.0,9.0
+L0577,45+,Java,Tablet,12.7,19,70,17,45,60.3,In Progress,36.0,1.0
+L0960,25-34,SQL,Mobile,12.9,16,45,10,30,23.6,Dropped,21.0,73.0
+L0391,25-34,SQL,Laptop,37.5,35,45,30,30,68.1,Completed,86.0,32.0
+L0105,35-44,Data Analytics,Laptop,5.5,9,55,4,35,28.3,In Progress,8.0,13.0
+L0115,18-24,Web Development,Desktop,22.3,57,75,37,50,58.4,In Progress,72.0,4.0
+L0418,35-44,Java,Mobile,28.0,70,70,45,45,87.6,Completed,162.0,4.0
+L0657,35-44,Python,Laptop,40.8,33,60,30,40,61.1,In Progress,65.0,1.0
+L0458,25-34,Data Analytics,Laptop,17.9,20,55,14,35,37.2,In Progress,27.0,17.0
+L0410,45+,Python,Desktop,18.9,46,60,40,40,67.5,Completed,99.0,45.0
+L0093,25-34,Data Analytics,Tablet,26.8,44,55,35,35,82.9,Completed,77.0,44.0
+L0571,18-24,Data Analytics,Desktop,16.7,29,55,20,35,44.5,Dropped,35.0,47.0
+L0090,25-34,Python,Laptop,23.1,47,60,31,40,63.2,In Progress,84.0,18.0
+L0337,18-24,SQL,Laptop,14.5,32,45,21,30,64.2,In Progress,61.0,9.0
+L0522,18-24,Python,Laptop,3.5,8,60,11,40,44.1,In Progress,28.0,1.0
+L0932,18-24,Web Development,Mobile,20.9,29,75,18,50,56.1,Dropped,,55.0
+L0944,25-34,Python,Mobile,13.2,32,60,22,40,46.0,In Progress,41.0,1.0
+L0614,45+,SQL,Mobile,13.3,24,45,12,30,45.2,In Progress,29.0,6.0
+L0602,35-44,Java,Laptop,26.7,43,70,28,45,50.7,In Progress,75.0,30.0
+L0986,45+,Web Development,Laptop,27.1,57,75,38,50,74.4,In Progress,,1.0
+L0095,18-24,Python,Desktop,19.3,42,60,30,40,62.3,In Progress,67.0,1.0
+L0012,45+,Java,Laptop,7.1,6,70,10,45,35.1,Dropped,16.0,79.0
+L0397,35-44,Data Analytics,Mobile,23.5,37,55,25,35,60.1,In Progress,51.0,2.0
+L0540,35-44,SQL,Desktop,8.1,15,45,13,30,38.5,In Progress,,14.0
+L0044,18-24,Web Development,Laptop,30.2,34,75,27,50,54.0,Dropped,44.0,49.0
+L0043,35-44,Web Development,Laptop,47.8,66,75,50,50,66.5,Completed,101.0,8.0
+L0330,18-24,Python,Mobile,31.2,54,60,40,40,74.2,Completed,128.0,18.0
+L0168,35-44,Data Analytics,Laptop,7.8,20,55,15,35,52.2,In Progress,37.0,2.0
+L0957,35-44,Python,Mobile,6.7,14,60,9,40,44.1,Dropped,17.0,82.0
+L0887,25-34,Data Analytics,Tablet,8.5,19,55,6,35,19.5,Dropped,15.0,54.0
+L0606,35-44,Web Development,Mobile,7.0,7,75,10,50,22.0,Dropped,19.0,52.0
+L0766,18-24,SQL,Laptop,15.5,34,45,20,30,61.3,Dropped,56.0,39.0
+L0101,45+,Data Analytics,Desktop,10.7,31,55,36,35,38.4,In Progress,44.0,7.0
+L0427,18-24,Python,Laptop,8.8,18,60,9,40,43.1,Dropped,17.0,102.0
+L0179,45+,Web Development,Desktop,9.2,22,75,18,50,33.8,In Progress,21.0,11.0
+L0445,18-24,SQL,Desktop,9.5,13,45,8,30,35.2,Dropped,26.0,33.0
+L0417,18-24,Web Development,Mobile,6.5,0,75,7,50,35.3,Dropped,18.0,50.0
+L0656,18-24,SQL,Desktop,22.2,23,45,15,30,49.1,Dropped,38.0,106.0
+L0893,18-24,Java,Laptop,4.9,21,70,9,45,30.6,In Progress,15.0,16.0
+L0667,35-44,Java,Desktop,40.4,53,70,45,45,65.0,Completed,123.0,39.0
+L0178,45+,SQL,Mobile,14.2,31,45,21,30,51.4,In Progress,80.0,5.0
+L0396,25-34,Web Development,Laptop,28.9,69,75,50,50,80.2,Completed,,30.0
+L0685,25-34,SQL,Mobile,18.9,44,45,30,30,64.4,Completed,83.0,16.0
+L0804,25-34,Python,Mobile,13.5,45,60,30,40,58.9,In Progress,,5.0
+L0973,18-24,SQL,Mobile,4.7,24,45,19,30,79.4,In Progress,57.0,13.0
+L0693,18-24,Data Analytics,Mobile,7.5,28,55,18,35,67.1,In Progress,50.0,7.0
+L0621,35-44,Data Analytics,Laptop,11.7,35,55,20,35,49.3,In Progress,,1.0
+L0258,18-24,Web Development,Tablet,21.0,48,75,38,50,64.8,In Progress,76.0,1.0
+L0336,25-34,SQL,Laptop,1.4,9,45,8,30,52.4,Dropped,31.0,52.0
+L0016,18-24,Java,Laptop,6.2,1,70,4,45,16.8,In Progress,10.0,21.0
+L0976,25-34,SQL,Laptop,15.7,40,45,22,30,47.1,In Progress,60.0,7.0
+L0325,35-44,Web Development,Mobile,23.3,58,75,36,50,64.8,In Progress,72.0,24.0
+L0768,18-24,Data Analytics,Mobile,10.6,11,55,6,35,32.8,Dropped,14.0,94.0
+L0223,25-34,Python,Mobile,7.3,10,60,12,40,53.5,In Progress,30.0,24.0
+L0180,35-44,SQL,Mobile,7.0,34,45,22,30,55.8,Dropped,70.0,68.0
+L0996,25-34,Web Development,Mobile,11.4,10,75,13,50,37.0,In Progress,24.0,30.0
+L0522,18-24,Python,Laptop,3.5,8,60,11,40,44.1,In Progress,28.0,1.0
+L0023,45+,Web Development,Desktop,48.4,56,75,50,50,70.5,Completed,100.0,26.0
+L0357,35-44,SQL,Laptop,16.3,39,45,30,30,71.6,Completed,81.0,13.0
+L0874,18-24,Java,Laptop,22.2,66,70,45,45,64.9,Completed,91.0,43.0
+L0928,35-44,Java,Mobile,22.9,33,70,20,45,35.1,In Progress,,4.0
+L0341,18-24,SQL,Laptop,19.0,16,45,19,30,53.5,In Progress,62.0,26.0
+L0432,35-44,SQL,Mobile,6.5,23,45,13,30,59.3,Dropped,23.0,71.0
+L0558,25-34,Data Analytics,Mobile,13.5,14,55,10,35,28.7,Dropped,18.0,36.0
+L0844,25-34,SQL,Laptop,9.6,17,45,12,30,47.2,Dropped,30.0,112.0
+L0204,18-24,Java,Mobile,36.4,69,70,45,45,61.4,Completed,121.0,11.0
+L0639,35-44,Python,Desktop,14.7,30,60,23,40,51.4,In Progress,41.0,30.0
+L0094,25-34,Python,Laptop,8.5,36,60,29,40,66.7,In Progress,67.0,7.0
+L0941,18-24,Web Development,Tablet,17.3,30,75,23,50,45.9,In Progress,,8.0
+L0069,18-24,Java,Mobile,14.1,30,70,22,45,46.9,In Progress,41.0,9.0
+L0631,45+,Data Analytics,Laptop,4.8,13,55,9,35,36.2,In Progress,28.0,2.0
+L0285,25-34,Web Development,Laptop,5.7,14,75,9,50,36.0,In Progress,17.0,9.0
+L0815,18-24,Python,Laptop,6.7,49,60,27,40,71.3,In Progress,52.0,1.0
+L0435,18-24,SQL,Mobile,16.1,21,45,18,30,58.7,In Progress,62.0,6.0
+L0154,25-34,SQL,Laptop,,37,45,30,30,72.2,Completed,82.0,5.0
+L0076,18-24,SQL,Laptop,15.0,45,45,30,30,92.0,Completed,101.0,17.0
+L0740,25-34,Java,Mobile,3.7,3,70,6,45,22.2,Dropped,18.0,109.0
+L0447,45+,Web Development,Laptop,7.9,9,75,13,50,41.5,In Progress,21.0,2.0
+L0189,35-44,SQL,Mobile,23.0,38,45,30,30,66.8,Completed,86.0,34.0
+L0272,18-24,Java,Desktop,18.6,53,70,27,45,46.8,In Progress,,3.0
+L0237,25-34,Java,Desktop,20.5,56,70,45,45,63.5,Completed,86.0,17.0
+L0488,18-24,Python,Mobile,31.0,53,60,40,40,78.8,Completed,83.0,39.0
+L0118,35-44,SQL,Mobile,20.2,38,45,30,30,79.3,Completed,97.0,25.0
+L0829,35-44,Web Development,Mobile,,3,75,4,50,7.2,Dropped,,40.0
+L0513,18-24,Data Analytics,Laptop,25.0,28,55,20,35,55.4,Dropped,54.0,93.0
+L0560,25-34,SQL,Laptop,17.7,20,45,15,30,56.4,Dropped,37.0,113.0
+L0600,25-34,Java,Laptop,7.2,34,70,18,45,41.0,In Progress,42.0,10.0
+L0127,18-24,Java,Laptop,,70,70,45,45,68.0,Completed,92.0,38.0
+L0117,35-44,Data Analytics,Laptop,35.6,40,55,35,35,71.2,Completed,91.0,13.0
+L0474,18-24,Java,Laptop,31.0,68,70,45,45,77.8,Completed,80.0,12.0
+L0905,45+,Web Development,Desktop,14.7,37,75,27,50,50.5,In Progress,47.0,14.0
+L0058,25-34,Web Development,Mobile,31.1,32,75,25,50,54.3,Dropped,50.0,67.0
+L0683,18-24,Java,Desktop,,14,70,12,45,40.0,Dropped,16.0,37.0
+L0923,25-34,Python,Desktop,26.3,38,60,28,40,48.1,In Progress,55.0,3.0
+L0370,45+,Python,Desktop,,16,60,13,40,51.4,In Progress,30.0,3.0
+L0269,18-24,Python,Laptop,23.9,35,60,19,40,44.0,In Progress,39.0,3.0
+L0047,25-34,SQL,Laptop,17.8,39,45,30,30,77.9,Completed,91.0,23.0
+L0350,18-24,SQL,Desktop,22.5,36,45,30,30,74.6,Completed,76.0,20.0
+L0196,18-24,Data Analytics,Mobile,20.9,39,55,23,35,47.7,In Progress,49.0,4.0
+L0077,18-24,SQL,Desktop,18.9,26,45,16,30,55.8,In Progress,53.0,6.0
+L0845,18-24,SQL,Mobile,14.2,17,45,13,30,56.4,In Progress,35.0,8.0
+L0746,25-34,SQL,Laptop,6.5,29,45,16,30,56.0,In Progress,38.0,22.0
+L0264,18-24,SQL,Laptop,11.4,25,45,18,30,59.6,In Progress,44.0,16.0
+L0444,18-24,Java,Laptop,6.9,17,70,14,45,44.4,In Progress,23.0,8.0
+L0789,35-44,Python,Laptop,25.3,33,60,25,40,48.3,Dropped,45.0,69.0
+L0305,35-44,Data Analytics,Mobile,5.8,46,55,20,35,60.0,In Progress,57.0,14.0
+L0342,45+,Java,Mobile,11.6,39,70,16,45,39.5,In Progress,27.0,6.0
+L0618,18-24,Python,Laptop,5.6,34,60,24,40,59.3,Dropped,59.0,71.0
+L0979,25-34,Java,Laptop,27.1,60,70,45,45,89.0,Completed,145.0,7.0
+L0150,18-24,Data Analytics,Desktop,12.4,33,55,22,35,46.3,In Progress,42.0,21.0
+L0125,18-24,Web Development,Laptop,30.9,66,75,50,50,77.1,Completed,134.0,11.0
+L0808,18-24,Java,Mobile,19.7,34,70,22,45,53.2,In Progress,45.0,4.0
+L0833,25-34,Java,Desktop,16.1,22,70,11,45,41.5,Dropped,21.0,64.0
+L0051,18-24,Python,Laptop,21.5,46,60,28,40,41.7,In Progress,50.0,4.0
+L0354,25-34,SQL,Desktop,9.7,20,45,14,30,43.6,In Progress,38.0,1.0
+L0938,18-24,Web Development,Mobile,4.7,20,75,10,50,39.6,Dropped,23.0,78.0
+L0143,45+,Data Analytics,Mobile,5.8,36,55,16,35,57.8,In Progress,,6.0
+L0471,25-34,Data Analytics,Laptop,15.1,49,55,35,35,75.0,Completed,123.0,26.0
+L0400,25-34,Web Development,Laptop,4.1,11,75,5,50,25.4,Dropped,16.0,57.0
+L0634,18-24,SQL,Tablet,26.4,33,45,30,30,78.3,Completed,87.0,26.0
+L0321,45+,Python,Tablet,,14,60,6,40,25.0,Dropped,15.0,85.0
+L0020,25-34,SQL,Laptop,19.7,32,45,21,30,57.1,Dropped,,48.0
+L0820,18-24,Web Development,Desktop,27.7,41,75,31,50,52.2,Dropped,62.0,40.0
+L0800,35-44,Java,Mobile,8.7,41,70,23,45,53.8,In Progress,46.0,5.0
+L0954,18-24,SQL,Desktop,14.2,14,45,10,30,47.2,In Progress,24.0,30.0
+L0408,35-44,Web Development,Laptop,30.3,52,75,31,50,55.9,In Progress,61.0,12.0
+L0538,18-24,SQL,Laptop,10.7,23,45,17,30,63.6,In Progress,50.0,5.0
+L0629,25-34,Web Development,Laptop,57.4,57,75,50,50,66.4,Completed,83.0,27.0
+L0039,18-24,Data Analytics,Desktop,3.8,41,55,23,35,55.7,In Progress,67.0,1.0
+L0176,18-24,Web Development,Tablet,19.6,21,75,12,50,37.1,In Progress,13.0,9.0
+L0246,35-44,Data Analytics,Mobile,3.8,15,55,7,35,35.6,Dropped,19.0,52.0
+L0885,18-24,Java,Laptop,26.6,45,70,33,45,48.1,Dropped,56.0,85.0
+L0676,25-34,SQL,Mobile,15.9,34,45,21,30,59.7,Dropped,51.0,79.0
+L0895,35-44,Java,Mobile,4.2,13,70,6,45,31.4,Dropped,15.0,75.0
+L0869,18-24,Data Analytics,Laptop,20.5,43,55,35,35,61.2,Completed,,36.0
+L0155,18-24,Web Development,Tablet,23.7,38,75,23,50,38.3,Dropped,33.0,33.0
+L0288,18-24,Data Analytics,Mobile,5.2,20,55,10,35,43.9,Dropped,21.0,111.0
+L0705,18-24,Python,Laptop,21.0,38,60,26,40,57.2,In Progress,67.0,24.0
+L0570,25-34,Data Analytics,Mobile,9.4,18,55,11,35,40.5,In Progress,24.0,4.0
+L0753,18-24,SQL,Laptop,27.5,26,45,22,30,79.6,In Progress,63.0,3.0
+L0018,18-24,Web Development,Tablet,4.5,4,75,5,50,27.1,Dropped,20.0,115.0
+L0128,18-24,Web Development,Laptop,17.3,57,75,31,50,62.6,Dropped,48.0,117.0
+L0323,18-24,Java,Mobile,25.9,59,70,34,45,63.8,In Progress,77.0,4.0
+L0256,35-44,Web Development,Mobile,0.5,7,75,6,50,41.3,Dropped,10.0,45.0
+L0666,35-44,SQL,Laptop,19.2,38,45,30,30,75.3,Completed,91.0,43.0
+L0977,25-34,SQL,Laptop,18.2,35,45,30,30,84.6,Completed,71.0,23.0
+L0191,45+,Java,Desktop,6.1,26,70,15,45,39.4,Dropped,32.0,103.0
+L0116,35-44,Java,Laptop,11.3,41,70,25,45,69.2,In Progress,56.0,3.0
+L0679,18-24,SQL,Laptop,10.6,33,45,24,30,55.0,In Progress,74.0,14.0
+L0607,35-44,SQL,Mobile,2.5,16,45,10,30,39.8,Dropped,23.0,55.0
+L0181,45+,Web Development,Mobile,19.3,60,75,50,50,70.9,Completed,98.0,17.0
+L0302,18-24,Python,Mobile,8.1,28,60,18,40,37.9,In Progress,39.0,5.0
+L0846,45+,SQL,Laptop,2.6,24,45,16,30,57.4,In Progress,36.0,20.0
+L0722,25-34,Web Development,Mobile,9.4,25,75,10,50,41.9,In Progress,15.0,2.0
+L0733,18-24,Data Analytics,Laptop,16.0,26,55,19,35,59.2,In Progress,59.0,9.0
+L0694,18-24,SQL,Laptop,32.7,44,45,30,30,90.3,Completed,122.0,40.0
+L0670,25-34,Data Analytics,Mobile,15.5,44,55,23,35,59.1,Dropped,62.0,68.0
+L0518,35-44,SQL,Laptop,7.2,13,45,11,30,60.8,Dropped,34.0,115.0
+L0997,25-34,Java,Mobile,15.2,25,70,20,45,43.3,In Progress,48.0,4.0
+L0046,35-44,Data Analytics,Laptop,8.5,11,55,9,35,40.2,In Progress,29.0,30.0
+L0920,25-34,Java,Tablet,5.8,22,70,10,45,24.6,Dropped,14.0,105.0
+L0158,25-34,Web Development,Desktop,25.6,62,75,40,50,64.0,Dropped,74.0,64.0
+L0754,25-34,Web Development,Mobile,6.0,28,75,20,50,45.4,Dropped,35.0,105.0
+L0172,25-34,Web Development,Mobile,37.2,52,75,35,50,77.2,In Progress,67.0,3.0
+L0017,25-34,SQL,Laptop,11.8,19,45,14,30,63.4,Dropped,29.0,105.0
+L0512,35-44,Data Analytics,Laptop,21.3,43,55,26,35,69.0,In Progress,65.0,6.0
+L0049,25-34,Web Development,Laptop,16.4,75,75,50,50,72.0,Completed,94.0,3.0
+L0984,25-34,Data Analytics,Laptop,16.3,37,55,24,35,63.1,In Progress,71.0,10.0
+L0851,18-24,Python,Laptop,,42,60,28,40,73.8,In Progress,69.0,7.0
+L0516,18-24,Data Analytics,Mobile,26.2,28,55,22,35,47.5,In Progress,59.0,10.0
+L0695,45+,Data Analytics,Mobile,3.4,17,55,13,35,47.2,In Progress,30.0,
+L0481,25-34,Web Development,Desktop,26.3,67,75,50,50,61.4,Completed,,6.0
+L0284,18-24,Web Development,Laptop,5.8,21,75,11,50,28.9,Dropped,25.0,93.0
+L0856,25-34,Python,Desktop,,58,60,40,40,100.0,Completed,111.0,39.0
+L0663,18-24,Python,Laptop,14.9,12,60,15,40,36.9,In Progress,17.0,1.0
+L0226,45+,Web Development,Laptop,28.9,75,75,50,50,87.3,Completed,89.0,0.0
+L0027,25-34,Web Development,Laptop,34.2,56,75,40,50,47.5,Dropped,75.0,99.0
+L0897,18-24,Web Development,Laptop,21.8,75,75,50,50,94.1,Completed,100.0,25.0
+L0438,25-34,Web Development,Mobile,50.8,71,75,50,50,78.5,Completed,,33.0
+L0962,25-34,SQL,Mobile,40.6,40,45,30,30,80.1,completed,117.0,36.0
+L0365,25-34,Web Development,Mobile,13.5,21,75,16,50,32.8,In Progress,18.0,1.0
+L0230,18-24,Data Analytics,Laptop,22.9,40,55,35,35,64.5,Completed,77.0,28.0
+L0038,25-34,Python,Mobile,21.0,31,60,27,40,44.3,In Progress,49.0,3.0
+L0978,25-34,Data Analytics,Laptop,4.5,18,55,8,35,35.9,In Progress,27.0,1.0
+L0375,18-24,Web Development,Desktop,8.7,23,75,11,50,41.4,Dropped,18.0,39.0
+L0470,25-34,Java,Mobile,32.4,67,70,45,45,91.7,Completed,99.0,22.0
+L0980,18-24,SQL,Tablet,10.8,31,45,23,30,60.4,In Progress,70.0,5.0
+L0137,45+,SQL,Laptop,11.6,28,45,19,30,69.1,In Progress,49.0,3.0
+L0713,35-44,Data Analytics,Desktop,0.7,15,55,9,35,22.9,In Progress,20.0,23.0
+L0735,18-24,SQL,Mobile,6.2,16,45,11,30,56.0,Dropped,29.0,114.0
+L0195,18-24,Web Development,Mobile,28.3,43,75,23,50,58.6,Dropped,41.0,90.0
+L0865,18-24,Python,Mobile,15.6,17,60,15,40,41.8,Dropped,23.0,41.0
+L0875,35-44,Java,Laptop,4.6,3,70,4,45,33.7,Dropped,1.0,58.0
+L0504,25-34,Python,Mobile,28.7,60,60,40,40,66.7,Completed,81.0,38.0
+L0982,35-44,Python,Laptop,36.7,42,60,41,40,54.8,In Progress,62.0,
+L0951,25-34,Python,Mobile,9.9,23,60,10,40,40.9,Dropped,20.0,84.0
+L0580,18-24,SQL,Laptop,12.0,25,45,16,30,50.9,In Progress,63.0,7.0
+L0981,45+,Web Development,Mobile,16.8,48,75,29,50,53.4,In Progress,37.0,1.0
+L0163,18-24,SQL,Desktop,11.7,42,45,30,30,75.1,Completed,88.0,
+L0715,35-44,SQL,Tablet,12.1,14,45,13,30,51.6,Dropped,30.0,115.0
+L0153,18-24,Data Analytics,Laptop,0.5,1,55,2,35,33.2,Dropped,12.0,96.0
+L0690,25-34,Data Analytics,Tablet,3.6,15,55,6,35,33.5,Dropped,16.0,35.0
+L0709,25-34,Web Development,Laptop,14.6,27,75,16,50,40.1,Dropped,17.0,91.0
+L0765,45+,Java,Mobile,11.4,25,70,18,45,44.9,In Progress,43.0,4.0
+L0112,18-24,Web Development,Desktop,44.2,58,75,50,50,59.3,Completed,71.0,42.0
+L0227,18-24,Data Analytics,Laptop,17.7,19,55,18,35,45.4,Dropped,43.0,39.0
+L0697,35-44,Python,Laptop,20.9,42,60,23,40,48.4,Dropped,52.0,56.0
+L0104,45+,Python,Desktop,15.5,43,60,31,40,60.9,In Progress,66.0,9.0
+L0422,18-24,Web Development,Laptop,26.6,68,75,50,50,84.4,Completed,101.0,15.0
+L0420,45+,SQL,Tablet,4.2,6,45,4,30,29.1,Dropped,12.0,84.0
+L0760,25-34,SQL,Mobile,8.8,10,45,13,30,48.4,In Progress,36.0,2.0
+L0587,18-24,Java,Laptop,1.5,19,70,10,45,17.9,Dropped,20.0,66.0
+L0790,25-34,Data Analytics,Laptop,17.8,49,55,35,35,87.0,Completed,68.0,41.0
+L0673,45+,Data Analytics,Mobile,1.1,3,55,6,35,43.1,Dropped,23.0,44.0
+L0120,25-34,Web Development,Laptop,16.6,41,75,25,50,33.3,Dropped,34.0,41.0
+L0054,25-34,Data Analytics,Laptop,39.1,52,55,35,35,80.1,Completed,79.0,18.0
+L0152,45+,Java,Laptop,32.4,40,70,23,45,40.7,In Progress,46.0,11.0
+L0404,18-24,SQL,Laptop,22.6,37,45,30,30,73.0,Completed,79.0,38.0
+L0983,35-44,Data Analytics,Laptop,34.0,47,55,35,35,84.3,Completed,109.0,23.0
+L0208,25-34,Data Analytics,Laptop,8.8,26,55,15,35,27.4,Dropped,39.0,77.0
+L0659,25-34,Web Development,Laptop,15.5,35,75,27,50,57.1,Dropped,39.0,49.0
+L0854,45+,Python,Mobile,18.4,33,60,20,40,67.2,In Progress,30.0,4.0
+L0922,35-44,Web Development,Laptop,14.6,34,75,24,50,35.9,In Progress,32.0,0.0
+L0009,18-24,Web Development,Laptop,26.9,47,75,31,50,39.8,In Progress,46.0,6.0
+L0818,25-34,Data Analytics,Desktop,36.6,51,55,35,35,88.5,Completed,107.0,25.0
+L0037,18-24,SQL,Desktop,17.5,38,45,24,30,54.5,In Progress,75.0,19.0
+L0453,35-44,Python,Desktop,6.4,28,60,11,40,39.8,Dropped,22.0,43.0
+L0652,45+,Data Analytics,Laptop,20.8,20,55,16,35,37.6,Dropped,35.0,40.0
+L0254,18-24,SQL,Desktop,10.0,11,45,7,30,41.1,In Progress,18.0,5.0
+L0304,25-34,Data Analytics,Mobile,20.0,46,55,35,35,62.4,Completed,,17.0
+L0756,18-24,Data Analytics,Mobile,11.9,41,55,21,35,64.3,In Progress,59.0,1.0
+L0572,35-44,Data Analytics,Mobile,46.6,38,55,35,35,64.9,Completed,104.0,31.0
+L0624,25-34,Data Analytics,Laptop,7.6,2,55,5,35,26.5,Dropped,13.0,74.0
+L0719,25-34,SQL,Tablet,5.1,10,45,12,30,50.2,In Progress,39.0,9.0
+L0729,25-34,SQL,Laptop,11.2,32,45,23,30,73.1,In Progress,81.0,30.0
+L0263,18-24,Python,Laptop,21.3,50,60,27,40,55.2,In Progress,58.0,4.0
+L0611,25-34,Data Analytics,Mobile,12.4,16,55,16,35,29.5,In Progress,28.0,6.0
+L0298,35-44,SQL,Laptop,3.4,10,45,6,30,31.0,Dropped,22.0,48.0
+L0415,18-24,Java,Laptop,2.4,1,70,4,45,23.7,Dropped,13.0,87.0
+L0151,35-44,Java,Laptop,15.0,58,70,45,45,62.9,Completed,75.0,26.0
+L0803,45+,Data Analytics,Mobile,13.7,34,55,23,35,57.9,In Progress,74.0,19.0
+L0641,35-44,Java,Desktop,3.8,16,70,6,45,22.0,In Progress,21.0,3.0
+L0900,25-34,Java,Mobile,14.2,23,70,18,45,38.5,Dropped,29.0,97.0
+L0551,25-34,Web Development,Tablet,9.3,31,75,14,50,35.7,Dropped,28.0,47.0
+L0801,35-44,Web Development,Tablet,17.2,18,75,15,50,39.2,In Progress,23.0,11.0
+L0489,25-34,SQL,Tablet,8.9,16,45,13,30,46.5,In Progress,30.0,6.0
+L0711,45+,Python,Tablet,48.7,58,60,40,40,78.4,Completed,145.0,4.0
+L0148,25-34,Data Analytics,Desktop,29.7,51,55,35,35,62.0,Completed,73.0,14.0
+L0147,18-24,Python,Laptop,46.1,55,60,40,40,66.5,Completed,73.0,5.0
+L0744,18-24,Data Analytics,mobile,9.1,23,55,14,35,51.7,In Progress,24.0,5.0
+L0942,35-44,Data Analytics,Laptop,17.8,33,55,18,35,52.4,Dropped,38.0,
+L0824,25-34,Data Analytics,Laptop,1.3,16,55,12,35,56.9,In Progress,26.0,6.0
+L0660,25-34,Python,Laptop,12.0,54,60,29,40,63.3,In Progress,59.0,1.0
+L0349,25-34,Java,Laptop,33.0,58,70,31,45,55.1,In Progress,66.0,0.0
+L0464,18-24,SQL,Laptop,19.4,29,45,19,30,74.4,In Progress,51.0,1.0
+L0326,25-34,Data Analytics,Laptop,17.6,37,55,22,35,54.3,In Progress,80.0,2.0
+L0187,18-24,Java,Mobile,13.9,15,70,14,45,43.3,Dropped,35.0,94.0
+L0124,25-34,Web Development,Laptop,27.2,64,75,50,50,57.8,Completed,72.0,15.0
+L0864,25-34,Web Development,Desktop,12.0,18,75,10,50,44.7,In Progress,15.0,29.0
+L0609,35-44,SQL,Laptop,4.2,25,45,18,30,52.1,Dropped,37.0,85.0
+L0144,25-34,Web Development,Laptop,18.6,57,75,36,50,60.7,In Progress,56.0,2.0
+L0971,18-24,Web Development,Mobile,22.2,51,75,32,50,62.5,Dropped,48.0,47.0
+L0198,35-44,Data Analytics,Desktop,3.3,12,55,8,35,44.3,In Progress,26.0,13.0
+L0610,25-34,Data Analytics,Laptop,5.4,20,55,11,35,37.3,In Progress,17.0,3.0
+L0280,35-44,Web Development,Mobile,12.4,36,75,26,50,35.0,In Progress,44.0,19.0
+L0294,18-24,Web Development,Mobile,29.2,63,75,50,50,73.6,Completed,121.0,12.0
+L0401,18-24,Python,Mobile,3.7,20,60,13,40,29.0,In Progress,43.0,11.0
+L0123,18-24,SQL,Desktop,1.5,9,45,5,30,25.4,Dropped,6.0,115.0
+L0184,18-24,Web Development,Laptop,19.7,52,75,32,50,50.0,In Progress,57.0,8.0
+L0203,25-34,Python,Laptop,68.1,51,60,40,40,60.7,Completed,60.0,42.0
+L0439,35-44,Data Analytics,Laptop,9.8,28,55,18,35,47.1,Dropped,46.0,73.0
+L0247,25-34,SQL,Mobile,2.4,14,45,10,30,59.1,In Progress,33.0,7.0
+L0416,18-24,SQL,Laptop,24.5,38,45,30,30,52.7,Completed,,38.0
+L0786,18-24,Python,Laptop,28.0,56,60,40,40,60.6,Completed,102.0,44.0
+L0775,18-24,SQL,Desktop,13.0,43,45,30,30,83.3,Completed,104.0,44.0
+L0917,18-24,Web Development,Laptop,25.7,34,75,30,50,71.2,Dropped,60.0,66.0
+L0778,18-24,Data Analytics,Laptop,0.5,7,55,2,35,40.9,Dropped,10.0,42.0
+L0940,18-24,Python,Desktop,17.1,46,60,27,40,46.6,In Progress,,2.0
+L0130,25-34,Java,Laptop,13.8,32,70,19,45,63.7,In Progress,42.0,0.0
+L0638,35-44,Web Development,Desktop,16.2,24,75,18,50,44.4,In Progress,32.0,4.0
+L0403,35-44,Web Development,Desktop,39.6,56,75,50,50,58.5,Completed,90.0,22.0
+L0794,18-24,SQL,Laptop,10.9,20,45,11,30,47.0,Dropped,27.0,98.0
+L0862,35-44,Data Analytics,Laptop,33.4,53,55,35,35,88.0,Completed,78.0,45.0
+L0736,25-34,Python,Desktop,4.3,20,60,8,40,28.9,In Progress,15.0,3.0
+L0924,25-34,SQL,Laptop,17.4,37,45,23,30,48.3,In Progress,83.0,3.0
+L0220,25-34,Python,Desktop,14.5,30,60,19,40,49.7,In Progress,48.0,4.0
+L0642,35-44,SQL,Mobile,4.0,5,45,4,30,32.7,Dropped,16.0,60.0
+L0926,18-24,Python,Mobile,0.5,1,60,4,40,16.5,Dropped,10.0,108.0
+L0762,18-24,SQL,Tablet,22.7,35,45,23,30,67.5,In Progress,66.0,3.0
+L0817,45+,Web Development,Laptop,11.8,43,75,30,50,61.2,In Progress,47.0,12.0
+L0930,35-44,Web Development,Desktop,7.8,17,75,8,50,35.8,Dropped,17.0,64.0
+L0625,45+,Data Analytics,Laptop,15.0,37,55,27,35,71.1,Dropped,79.0,50.0
+L0849,18-24,Java,Laptop,11.6,30,70,15,45,31.5,Dropped,26.0,39.0
+L0990,35-44,SQL,Mobile,29.5,32,45,24,30,90.9,In Progress,78.0,9.0
+L0387,35-44,Data Analytics,Laptop,36.7,44,55,35,35,73.0,Completed,92.0,17.0
+L0985,18-24,Web Development,Desktop,8.8,2,75,7,50,30.6,In Progress,9.0,10.0
+L0510,18-24,Python,Mobile,1.8,8,60,4,40,44.2,Dropped,12.0,33.0
+L0268,18-24,Web Development,Laptop,14.4,27,75,12,50,35.7,Dropped,15.0,43.0
+L0830,18-24,Python,Mobile,5.1,18,60,6,40,31.3,Dropped,20.0,101.0
+L0442,18-24,Python,Mobile,14.2,35,60,20,40,47.7,In Progress,46.0,10.0
+L0497,25-34,Data Analytics,Laptop,12.3,30,55,18,35,42.8,In Progress,42.0,2.0
+L0113,18-24,Data Analytics,Desktop,20.1,53,55,35,35,77.5,Completed,100.0,26.0
+L0692,45+,Web Development,Mobile,20.1,56,75,39,50,68.5,In Progress,72.0,20.0
+L0233,45+,Data Analytics,Mobile,0.5,0,55,2,35,27.0,Dropped,9.0,97.0
+L0880,25-34,Data Analytics,Mobile,12.2,34,55,19,35,49.2,In Progress,45.0,9.0
+L0608,18-24,Java,Tablet,10.5,26,70,16,45,56.7,In Progress,37.0,7.0
+L0672,25-34,Data Analytics,Laptop,18.9,38,55,24,35,44.8,Dropped,54.0,87.0
+L0374,18-24,Java,Tablet,19.6,45,70,31,45,58.6,In Progress,70.0,1.0
+L0994,18-24,Data Analytics,Tablet,32.9,45,55,35,35,80.3,Completed,114.0,22.0
+L0853,35-44,Python,Laptop,29.7,31,60,27,40,49.4,Dropped,47.0,74.0
+L0234,25-34,Python,Laptop,17.0,50,60,31,40,65.9,In Progress,57.0,12.0
+L0912,35-44,Python,Tablet,4.8,28,60,14,40,35.7,DROPPED,25.0,36.0
+L0677,45+,Data Analytics,Laptop,7.4,41,55,23,35,69.8,Dropped,62.0,59.0
+L0318,25-34,SQL,Mobile,31.4,40,45,30,30,72.9,Completed,81.0,40.0
+L0649,25-34,Data Analytics,Desktop,38.4,55,55,35,35,79.9,Completed,112.0,36.0
+L0411,25-34,SQL,Laptop,20.1,22,45,16,30,56.0,Dropped,36.0,109.0
+L0909,18-24,Python,Laptop,14.6,20,60,15,40,55.1,Dropped,28.0,41.0
+L0710,25-34,Data Analytics,Laptop,3.1,22,55,11,35,45.6,In Progress,33.0,18.0
+L0359,25-34,Web Development,Laptop,16.2,34,75,22,50,34.7,Dropped,41.0,115.0
+L0259,18-24,Python,Desktop,10.3,45,60,29,40,54.9,In Progress,68.0,30.0
+L0745,25-34,Python,Laptop,12.8,16,60,12,40,40.7,Dropped,30.0,40.0
+L0628,18-24,Python,Laptop,,58,60,40,40,64.3,Completed,76.0,27.0
+L0633,18-24,Data Analytics,Tablet,0.5,6,55,5,35,45.7,Dropped,19.0,112.0
+L0283,18-24,Java,Laptop,60.7,70,70,45,45,72.0,Completed,111.0,18.0
+L0377,45+,Data Analytics,Laptop,23.8,43,55,26,35,66.3,In Progress,76.0,17.0
+L0385,18-24,Python,Laptop,7.7,19,60,9,40,56.2,Dropped,28.0,85.0
+L0225,18-24,SQL,Mobile,14.3,42,45,24,30,51.8,Dropped,69.0,34.0
+L0966,25-34,SQL,Mobile,3.0,6,45,3,30,31.6,Dropped,9.0,61.0
+L0825,35-44,Web Development,Laptop,35.8,64,75,38,50,71.0,In Progress,74.0,4.0
+L0473,18-24,SQL,Mobile,5.7,18,45,8,30,40.6,Dropped,24.0,97.0
+L0348,18-24,Web Development,Mobile,20.0,26,75,19,50,37.8,In Progress,26.0,1.0
+L0506,35-44,Python,Desktop,14.6,50,60,40,40,69.4,Completed,87.0,6.0
+L0640,35-44,Data Analytics,Desktop,26.3,42,55,28,35,55.1,In Progress,64.0,0.0
+L1000,18-24,Web Development,Mobile,10.1,30,75,12,50,35.5,Dropped,26.0,42.0
+L0798,18-24,SQL,Laptop,8.5,29,45,19,30,50.3,In Progress,55.0,14.0
+L0939,45+,Data Analytics,Mobile,9.4,32,55,18,35,48.7,In Progress,,28.0
+L0916,45+,SQL,Laptop,5.7,0,45,3,30,38.5,Dropped,13.0,92.0
+L0620,18-24,Data Analytics,Laptop,17.1,31,55,22,35,52.7,In Progress,,1.0
+L0866,45+,Python,Mobile,21.1,42,60,27,40,59.0,Dropped,66.0,60.0
+L0814,25-34,Data Analytics,Laptop,10.6,25,55,16,35,34.0,In Progress,44.0,2.0
+L0646,35-44,Python,Tablet,7.7,29,60,14,40,35.5,Dropped,26.0,60.0
+L0886,18-24,Python,Desktop,13.3,31,60,18,40,52.8,In Progress,34.0,3.0
+L0557,18-24,Web Development,Tablet,43.1,70,75,50,50,70.6,Completed,113.0,9.0
+L0970,18-24,Web Development,Laptop,9.6,33,75,24,50,60.8,In Progress,54.0,4.0
+L0578,25-34,SQL,Laptop,2.9,13,45,8,30,46.2,In Progress,36.0,2.0
+L0796,18-24,Data Analytics,Laptop,1.8,16,55,8,35,39.3,In Progress,25.0,8.0
+L0086,18-24,Web Development,Tablet,24.2,50,75,33,50,58.1,In Progress,64.0,9.0
+L0243,18-24,SQL,Laptop,13.9,45,45,30,30,99.2,Completed,98.0,17.0
+L0699,25-34,Python,Laptop,13.4,35,60,27,40,49.9,In Progress,,2.0
+L0160,35-44,Java,Laptop,20.1,19,70,46,45,36.9,In Progress,23.0,2.0
+L0525,18-24,Python,Mobile,16.1,25,60,25,40,73.0,In Progress,62.0,6.0
+L0036,18-24,Data Analytics,Mobile,7.3,14,55,11,35,35.4,Dropped,23.0,77.0
+L0541,45+,Java,Laptop,15.1,36,70,19,45,39.7,In Progress,31.0,
+L0171,18-24,Python,Laptop,38.8,40,60,30,40,64.7,In Progress,64.0,12.0
+L0655,35-44,Data Analytics,Mobile,1.0,15,55,9,35,40.8,Dropped,18.0,33.0
+L0901,25-34,SQL,Mobile,6.6,28,45,16,30,49.3,In Progress,48.0,14.0
+L0868,35-44,Python,Laptop,24.7,47,60,28,40,44.7,Dropped,60.0,56.0
+L0858,35-44,Web Development,Mobile,18.9,57,75,35,50,57.7,In Progress,59.0,7.0
+L0955,45+,Java,Mobile,17.3,36,70,22,45,48.6,In Progress,46.0,1.0
+L0734,25-34,Java,Tablet,31.0,28,70,23,45,29.0,In Progress,38.0,16.0
+L0096,25-34,Web Development,Mobile,18.5,47,75,33,50,63.3,In Progress,73.0,1.0
+L0564,25-34,SQL,Laptop,16.3,40,45,30,30,66.1,Completed,,15.0
+L0241,35-44,Java,Laptop,1.3,5,70,3,45,10.9,Dropped,11.0,91.0
+L0743,35-44,SQL,DESKTOP,12.3,19,45,14,30,55.3,In Progress,43.0,17.0
+L0575,35-44,Web Development,Laptop,8.3,16,75,12,50,29.8,Dropped,16.0,41.0
+L0691,18-24,Web Development,Laptop,24.2,66,75,50,50,80.3,Completed,83.0,27.0
+L0461,25-34,Java,Mobile,36.2,48,70,27,45,60.9,In Progress,57.0,5.0
+L0554,45+,Python,Desktop,8.1,18,60,13,40,51.4,In Progress,31.0,21.0
+L0889,18-24,Python,Mobile,20.7,34,60,24,40,40.3,Dropped,53.0,40.0
+L0207,18-24,Python,Laptop,26.4,60,60,40,40,78.0,Completed,83.0,6.0
+L0393,25-34,Web Development,Mobile,40.6,62,75,40,50,84.2,In Progress,83.0,20.0
+L0795,18-24,Python,Laptop,23.3,53,60,40,40,69.4,Completed,84.0,33.0
+L0398,18-24,Java,Laptop,33.2,63,70,45,45,61.8,Completed,79.0,23.0
+L0767,18-24,Java,Desktop,42.1,46,70,35,45,73.6,In Progress,66.0,3.0
+L0859,18-24,Web Development,Tablet,31.4,75,75,50,50,92.7,Completed,177.0,16.0
+L0218,18-24,python,Mobile,0.9,10,55,5,35,52.4,Dropped,13.0,83.0
+L0005,18-24,Web Development,Desktop,,17,75,11,50,42.1,In Progress,,14.0
+L0769,18-24,SQL,Mobile,24.5,37,45,30,30,76.8,Completed,79.0,12.0
+L0643,18-24,Java,Desktop,19.2,30,70,22,45,48.6,In Progress,41.0,7.0
+L0908,18-24,Data Analytics,Laptop,2.7,10,55,7,35,46.7,Dropped,10.0,109.0
+L0613,45+,Python,Laptop,18.9,34,60,18,40,45.5,Dropped,29.0,41.0
+L0739,25-34,SQL,Laptop,17.2,36,45,30,30,66.6,Completed,72.0,35.0
+L0547,25-34,Web Development,Mobile,7.2,40,75,22,50,50.7,In Progress,35.0,16.0
+L0726,18-24,Web Development,Laptop,25.6,67,75,50,50,68.1,Completed,66.0,44.0
+L0684,25-34,Data Analytics,Laptop,10.7,31,55,21,35,60.1,In Progress,51.0,8.0
+L0099,18-24,Web Development,Desktop,24.2,47,75,26,50,49.2,In Progress,55.0,15.0
+L0805,18-24,Python,Mobile,16.2,51,60,32,40,78.3,In Progress,86.0,10.0
+L0728,18-24,Python,Laptop,14.0,29,60,21,40,55.7,Dropped,60.0,116.0
+L0574,35-44,Java,Desktop,2.1,6,70,3,45,13.9,Dropped,8.0,63.0
+L0407,18-24,Java,Mobile,27.3,50,70,30,45,62.9,In Progress,,4.0
+L0503,45+,Web Development,Tablet,11.8,63,75,35,50,72.8,In Progress,60.0,3.0
+L0048,18-24,SQL,Desktop,7.9,22,45,13,30,46.9,Dropped,32.0,105.0
+L0033,18-24,Python,Mobile,59.3,45,60,40,40,60.9,Completed,75.0,13.0
+L0780,35-44,Python,Mobile,12.2,19,60,15,40,55.2,In Progress,32.0,2.0
+L0840,25-34,Data Analytics,Laptop,33.3,46,55,35,35,71.9,Completed,103.0,31.0
+L0201,35-44,Java,Desktop,39.4,69,70,45,45,74.7,Completed,102.0,5.0
+L0135,25-34,SQL,Tablet,15.2,15,45,12,30,43.1,Dropped,22.0,92.0
+L0028,18-24,Data Analytics,Mobile,9.5,32,55,25,35,63.9,In Progress,67.0,16.0
+L0891,18-24,Python,Mobile,20.2,19,60,18,40,57.6,In Progress,36.0,4.0
+L0231,18-24,Web Development,Tablet,51.6,62,75,50,50,70.0,Completed,72.0,
+L0490,25-34,Java,Laptop,0.5,6,70,2,45,12.8,Dropped,9.0,46.0
+L0773,25-34, java,Desktop,18.1,70,70,45,45,91.2,Completed,105.0,14.0
+L0379,25-34,Data Analytics,Mobile,8.7,26,55,16,35,55.3,Dropped,,90.0
+L0289,25-34,Data Analytics,Desktop,16.1,35,55,21,35,61.2,Dropped,60.0,46.0
+L0419,18-24,Java,Mobile,0.5,0,70,3,45,21.2,Dropped,16.0,43.0
+L0675,25-34,Data Analytics,Laptop,18.9,33,55,22,35,48.5,In Progress,65.0,6.0
+L0392,18-24,Python,Desktop,19.3,48,60,26,40,58.8,In Progress,71.0,2.0
+L0593,18-24,SQL,Mobile,7.6,13,45,7,30,28.5,In Progress,25.0,3.0
+L0499,18-24,Python,Desktop,12.7,43,60,28,40,52.2,In Progress,56.0,5.0
+L0139,35-44,SQL,Laptop,18.0,38,45,30,30,61.1,Completed,75.0,44.0
+L0063,25-34,Python,Desktop,45.1,50,60,40,40,83.1,Completed,81.0,34.0
+L0472,25-34,Python,Tablet,25.1,59,60,40,40,83.5,Completed,93.0,22.0
+L0648,25-34,Web Development,Tablet,2.9,18,75,9,50,42.2,In Progress,22.0,10.0
+L0129,18-24,Python,Laptop,34.8,35,60,21,40,54.2,In Progress,38.0,4.0
+L0989,18-24,Data Analytics,Laptop,17.2,22,55,14,35,24.0,Dropped,29.0,110.0
+L0521,35-44,SQL,Mobile,27.2,40,45,30,30,82.6,Completed,83.0,26.0
+L0839,25-34,Java,Mobile,25.1,13,70,8,45,29.0,In Progress,16.0,4.0
+L0975,18-24,Python,Laptop,24.8,44,60,30,40,44.7,In Progress,60.0,6.0
+L0065,25-34,SQL,Desktop,22.7,30,45,16,30,56.8,Dropped,32.0,94.0
+L0813,45+,Python,Laptop,27.8,34,60,20,40,58.8,In Progress,35.0,1.0
+L0015,25-34,Web Development,Desktop,8.0,23,75,11,50,30.4,In Progress,18.0,7.0
+L0157,18-24,SQL,Laptop,15.1,20,45,14,30,59.1,In Progress,30.0,12.0
+L0041,25-34,Java,Desktop,50.4,50,70,29,45,61.8,In Progress,56.0,4.0
+L0493,25-34,Data Analytics,Laptop,9.8,28,55,17,35,44.0,In Progress,41.0,11.0
+L0380,35-44,Web Development,Mobile,11.2,26,75,20,50,38.2,In Progress,35.0,13.0
+L0188,18-24,Java,Mobile,15.6,26,70,17,45,53.1,Dropped,42.0,112.0
+L0764,18-24,Python,Laptop,11.8,14,60,16,40,35.6,Dropped,32.0,69.0
+L0217,18-24,SQL,Laptop,16.7,14,45,15,30,48.9,In Progress,,1.0
+L0792,25-34,Python,Mobile,25.3,43,60,31,40,54.6,In Progress,68.0,
+L0053,35-44,Java,Laptop,11.4,20,70,15,45,40.5,In Progress,30.0,26.0
+L0879,25-34,Data Analytics,Laptop,16.2,42,55,27,35,74.1,In Progress,80.0,22.0
+L0338,35-44,Data Analytics,Mobile,26.1,45,55,35,35,52.5,Completed,92.0,38.0
+L0749,35-44,SQL,Laptop,6.3,25,45,23,30,62.5,Dropped,68.0,112.0
+L0720,45+,Python,Laptop,17.3,43,60,29,40,69.4,In Progress,72.0,5.0
+L0725,18-24,Web Development,Desktop,34.0,67,75,50,50,78.9,Completed,,36.0
+L0296,45+,Data Analytics,Laptop,6.9,30,55,23,35,66.6,In Progress,72.0,4.0
+L0702,18-24,Web Development,Tablet,46.9,65,75,36,50,58.2,Dropped,57.0,49.0
+L0252,35-44,SQL,Laptop,14.6,29,45,21,30,51.5,Dropped,55.0,59.0
+L0727,18-24,SQL ,Mobile,21.5,45,60,31,40,64.7,In Progress,88.0,11.0
+L0462,18-24,Java,Laptop,11.3,34,70,18,45,57.4,Dropped,41.0,105.0
+L0456,18-24,SQL,Tablet,10.0,7,45,8,30,38.3,In Progress,22.0,5.0
+L0860,25-34,SQL,Laptop,,40,45,30,30,64.8,Completed,81.0,12.0
+L0816,45+,Python,Laptop,11.3,22,60,15,40,39.7,Dropped,,51.0
+L0863,35-44,Data Analytics,Mobile,8.8,24,55,8,35,38.6,Dropped,28.0,119.0
+L0270,18-24,Data Analytics,Desktop,18.7,30,55,17,35,65.5,In Progress,50.0,6.0
+L0202,45+,data analytics,Tablet,,31,60,13,40,46.6,Dropped,23.0,115.0
+L0162,45+,Java,Mobile,9.5,37,70,22,45,48.8,In Progress,34.0,20.0
+L0556,18-24,Python,Mobile,43.6,54,60,32,40,70.5,In Progress,63.0,12.0
+L0730,25-34,SQL,Mobile,0.5,0,45,3,30,28.7,In Progress,15.0,12.0
+L0402,45+,SQL,Laptop,18.2,32,45,23,30,48.3,Dropped,55.0,59.0
+L0703,18-24,Java,Desktop,50.0,69,70,45,45,68.3,Completed,97.0,22.0
+L0477,25-34,SQL,Mobile,3.2,5,45,4,30,29.1,Dropped,12.0,43.0
+L0822,25-34,Data Analytics,Laptop,26.7,40,55,22,35,69.0,Dropped,54.0,97.0
+L0772,25-34,Python,Mobile,26.2,51,60,40,40,82.4,Completed,93.0,32.0
+L0106,35-44,Java,Laptop,5.5,23,70,16,45,45.2,In Progress,29.0,8.0
+L0566,25-34,web dev,Tablet,24.9,15,45,16,30,59.7,In Progress,52.0,3.0
+L0390,35-44,Data Analytics,Mobile,7.4,24,55,17,35,38.5,In Progress,40.0,3.0
+L0002,25-34,Python,Tablet,22.4,37,60,22,40,45.9,Dropped,37.0,79.0
+L0948,35-44,SQL,Laptop,0.5,17,45,7,30,101.5,Dropped,17.0,77.0
+L0995,45+,Web Development,Desktop,47.4,69,75,50,50,74.7,Completed,104.0,20.0
+L0562,18-24,Java,Laptop,35.2,55,70,45,45,58.8,Completed,86.0,17.0
+L0081,25-34,Data Analytics,Desktop,,31,55,22,35,50.6,In Progress,51.0,3.0
+L0206,18-24,Web Development,Tablet,2.4,4,75,5,50,22.2,Dropped,11.0,86.0
+L0035,25-34,Data Analytics,Laptop,26.9,47,55,35,35,87.3,Completed,110.0,39.0
+L0776,35-44,Java,Laptop,24.8,41,70,28,45,70.3,In Progress,59.0,10.0
+L0509,25-34,SQL,Laptop,4.5,9,45,4,30,17.7,Dropped,9.0,89.0
+L0428,35-44,Java,Mobile,0.5,8,70,1,45,20.3,Dropped,10.0,76.0
+L0455,18-24,Data Analytics,Desktop,21.5,26,55,17,35,38.5,In Progress,40.0,5.0
+L0367,35-44,Java,Tablet,12.4,29,70,12,45,35.4,In Progress,,3.0
+L0092,25-34,Java,Laptop,3.6,10,70,5,45,24.3,Dropped,7.0,49.0
+L0340,45+,Python,Mobile,3.7,23,60,14,40,48.4,Dropped,30.0,89.0
+L0898,18-24,Web Development,Laptop,17.7,56,75,37,50,65.7,In Progress,63.0,1.0
+L0565,25-34,SQL,Mobile,14.8,45,45,30,30,82.6,Completed,134.0,37.0
+L0346,35-44,Java,Mobile,17.1,38,70,26,45,58.6,Dropped,51.0,82.0
+L0777,25-34,SQL,Mobile,18.7,19,45,13,30,31.4,In Progress,35.0,12.0
+L0242,35-44,Web Development,Laptop,20.5,44,75,28,50,50.8,Dropped,39.0,40.0
+L0014,35-44,Data Analytics,Mobile,8.0,1,55,4,35,34.5,Dropped,,65.0
+L0316,18-24,Python,Mobile,6.1,7,60,6,40,29.8,Dropped,22.0,50.0
+L0601,25-34,Data Analytics,Mobile,15.1,34,55,22,35,69.2,Dropped,62.0,39.0
+L0388,45+,Data Analytics,Laptop,6.3,6,55,7,35,32.1,In Progress,19.0,17.0
+L0274,25-34,SQL,Desktop,2.4,15,45,11,30,31.1,Dropped,20.0,67.0
+L0167,35-44,Java,Desktop,8.1,19,70,12,45,36.4,In Progress,24.0,12.0
+L0841,18-24,SQL,Laptop,5.8,5,45,6,30,34.6,Dropped,18.0,45.0
+L0412,25-34,Python,Laptop,,35,60,27,40,66.2,In Progress,54.0,25.0
+L0647,18-24,SQL,Laptop,16.9,38,45,30,30,62.5,Completed,85.0,41.0
+L0819,25-34,Python,Mobile,10.2,11,60,12,40,51.0,Dropped,,
+L0485,18-24,Java,Mobile,4.8,10,70,6,45,34.5,Dropped,17.0,
+L0993,35-44,Python,Laptop,7.7,22,60,14,40,42.2,In Progress,47.0,2.0
+L0505,25-34,Python,Laptop,8.5,7,60,8,40,28.5,completed,25.0,31.0
+L0832,25-34,Web Development,Laptop,6.3,4,75,4,50,12.0,Dropped,18.0,37.0
+L0244,25-34,Python,Tablet,0.7,10,60,7,40,39.6,Dropped,15.0,91.0
+L0567,35-44,Data Analytics,Mobile,,27,55,15,35,53.8,In Progress,33.0,0.0
+L0876,45+,SQL,mobile,26.6,21,45,16,30,40.3,In Progress,40.0,5.0
+L0563,35-44,Web Development,Mobile,10.0,31,75,15,50,49.0,In Progress,42.0,23.0
+L0965,45+,Web Development,Laptop,9.6,2,75,6,50,16.5,In Progress,11.0,7.0
+L0687,25-34,Java,Desktop,23.8,42,70,26,45,46.9,Dropped,50.0,34.0
+L0958,25-34,SQL,Laptop,22.7,36,45,30,30,92.6,Completed,85.0,1.0
+L0190,18-24,SQL,Laptop,18.5,38,45,30,30,63.6,Completed,72.0,9.0
+L0783,25-34,Web Development,Laptop,25.6,48,75,35,50,73.3,In Progress,70.0,12.0
+L0700,18-24,Python,Mobile,15.5,21,60,16,40,56.5,In Progress,22.0,4.0
+L0476,18-24,SQL,Laptop,19.6,31,45,21,30,64.4,In Progress,56.0,19.0
+L0682,18-24,Python,Tablet,12.1,37,60,26,40,54.9,In Progress,59.0,3.0
+L0511,18-24,Python,Laptop,7.8,42,60,27,40,59.4,In Progress,56.0,0.0
+L0059,18-24,Java,Mobile,44.3,58,70,35,45,68.8,In Progress,91.0,6.0
+L0475,18-24,Python,Laptop,21.2,31,60,17,40,26.9,In Progress,29.0,4.0
+L0561,18-24,SQL,Tablet,3.3,0,45,3,30,15.3,Dropped,12.0,33.0
+L0857,35-44,SQL,Mobile,24.1,33,45,23,30,66.4,In Progress,71.0,2.0
+L0748,25-34,Data Analytics,Mobile,6.0,9,55,4,35,32.9,Dropped,13.0,120.0
+L0253,25-34,Java,Desktop,15.1,39,70,23,45,62.6,In Progress,54.0,6.0
+L0022,18-24,Web Development,Mobile,36.0,49,75,33,50,51.1,In Progress,73.0,21.0
+L0314,18-24,Python,Laptop,30.5,47,60,27,40,70.0,In Progress,68.0,6.0
+L0460,25-34,Python,Mobile,48.0,54,60,32,40,59.8,Dropped,68.0,107.0
+L0161,18-24,Data Analytics,Laptop,0.7,13,55,5,35,36.6,Dropped,11.0,120.0
+L0277,18-24,Java,Mobile,3.8,19,70,5,45,28.0,Dropped,12.0,115.0
+L0956,45+,Data Analytics,Mobile,3.7,33,55,23,35,66.5,In Progress,76.0,9.0
+L0192,18-24,SQL,Desktop,14.8,36,45,22,30,57.9,In Progress,60.0,5.0
+L0386,45+,Data Analytics,Laptop,35.6,50,55,35,35,68.8,Completed,74.0,28.0
+L0806,18-24,Data Analytics,Laptop,21.2,29,55,18,35,51.2,In Progress,33.0,2.0
+L0414,45+,Web Development,Mobile,,18,75,11,50,31.9,Dropped,,101.0
+L0492,25-34,Java,Mobile,44.4,69,70,45,45,88.0,Completed,92.0,38.0
+L0344,25-34,Web Development,Tablet,5.4,22,75,17,50,39.6,In Progress,23.0,4.0
+L0770,25-34,Data Analytics,Desktop,13.6,54,55,35,35,70.4,Completed,85.0,26.0
+L0309,18-24,Java,Laptop,52.8,52,70,36,45,71.3,In Progress,88.0,13.0
+L0662,45+,Web Development,Laptop,17.3,50,75,37,50,66.7,In Progress,62.0,4.0
+L0131,18-24,Web Development,Mobile,13.7,14,75,13,50,44.1,Dropped,19.0,45.0
+L0664,18-24,SQL,Mobile,10.5,15,45,9,30,49.3,Dropped,26.0,42.0
+L0872,18-24,Data Analytics,Laptop,0.8,15,55,11,35,38.2,In Progress,22.0,
+L0100,45+,Java,Laptop,8.1,23,70,12,45,36.8,In Progress,30.0,8.0
+L0373,18-24,Python,Tablet,16.9,53,60,40,40,73.0,Completed,80.0,16.0
+L0088,25-34,Web Development,Mobile,38.2,40,75,29,50,55.0,completed,48.0,34.0
+L0459,35-44,SQL,Desktop,17.1,13,45,10,30,56.2,In Progress,24.0,25.0
+L0331,35-44,Python,Mobile,6.2,34,60,23,40,65.5,In Progress,54.0,6.0
+L0215,35-44,Python,Laptop,5.6,23,60,12,40,42.3,Dropped,14.0,51.0
+L0467,25-34,Java,Mobile,11.3,34,70,17,45,41.3,In Progress,33.0,5.0
+L0122,25-34,Data Analytics,Mobile,27.4,28,55,17,35,51.2,Dropped,47.0,76.0
+L0615,18-24,Python,Laptop,22.7,55,60,40,40,74.6,Completed,107.0,30.0
+L0021,35-44,Java,Laptop,26.5,41,70,25,45,48.3,In Progress,41.0,8.0
+L0701,18-24,Data Analytics,Laptop,17.2,43,55,35,35,80.6,Completed,77.0,34.0
+L0072,25-34,Web Development,Mobile,16.1,63,75,50,50,60.5,Completed,106.0,12.0
+L0107,25-34,Web Development,Tablet,18.0,31,75,26,50,43.8,Dropped,49.0,93.0
+L0271,18-24,Java,Mobile,16.5,32,70,24,45,47.3,Dropped,63.0,81.0
+L0861,35-44,Python,Desktop,29.5,36,60,31,40,56.9,In Progress,74.0,1.0
+L0436,18-24,SQL,Laptop,29.8,39,45,30,30,82.9,Completed,97.0,38.0
+L0103,18-24,Python,Mobile,4.6,7,60,3,40,9.8,Dropped,15.0,78.0
