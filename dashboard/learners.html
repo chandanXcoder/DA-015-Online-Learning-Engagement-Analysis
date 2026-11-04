@@ -4,49 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learner Explorer · DA-015 Learning Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="learners">
   <div class="loader"><div class="loader-ring"></div></div>
 
   <main class="content" id="content">
-    <div class="card" style="margin-bottom:20px">
-      <div class="toolbar" id="filters">
-        <div class="field"><label for="q">Search ID</label><input type="search" id="q" placeholder="e.g. L0042"></div>
-        <div class="field"><label for="fModule">Module</label><select id="fModule" data-col="course_module"></select></div>
-        <div class="field"><label for="fDevice">Device</label><select id="fDevice" data-col="device_type"></select></div>
-        <div class="field"><label for="fAge">Age group</label><select id="fAge" data-col="age_group"></select></div>
-        <div class="field"><label for="fStatus">Status</label><select id="fStatus" data-col="completion_status"></select></div>
-        <div class="field"><label for="fEng">Engagement</label><select id="fEng" data-col="engagement_category"></select></div>
-        <div class="field"><label for="fInactive">Activity</label>
-          <select id="fInactive"><option value="All">All learners</option><option value="inactive">Inactive &gt; 30 days</option><option value="active">Active ≤ 30 days</option></select></div>
-        <div class="field" style="flex-direction:row;gap:8px;align-self:flex-end">
-          <button class="btn" id="resetBtn">Reset</button>
-          <button class="btn primary" id="exportBtn">Export CSV</button>
-        </div>
+    <div class="page-head">
+      <div><h1>Learner Explorer</h1><p>Search, filter and export individual learner records · click a row for the full profile</p></div>
+      <div class="page-meta">
+        <button class="btn primary" id="exportBtn"><i data-lucide="file-down"></i>Export CSV</button>
       </div>
-      <div class="stat-strip" id="filterStats" style="margin-bottom:0"></div>
     </div>
 
+    <div id="filterbar"></div>
+    <div class="stat-strip" id="filterStats" style="margin-bottom:16px"></div>
+
     <div class="card">
-      <div class="card-head"><div><h3 class="card-title">Learner records</h3>
-        <p class="card-sub" id="resultNote">Click a column header to sort</p></div></div>
-      <div class="table-wrap"><table class="data compact" id="learnerTable"></table></div>
-      <div class="pager">
-        <span id="pageInfo"></span>
-        <div class="pager-btns">
-          <select id="pageSize" style="min-width:110px"><option>25</option><option>50</option><option>100</option></select>
-          <button class="btn" id="prevBtn">‹ Prev</button>
-          <button class="btn" id="nextBtn">Next ›</button>
+      <div class="card-head" style="flex-wrap:wrap;gap:10px">
+        <div class="ttl"><h3 class="card-title">Learner records</h3><p class="card-sub" id="resultNote"></p></div>
+        <div class="toolbar" style="margin-left:auto">
+          <div class="input-icon"><i data-lucide="search"></i><input type="search" id="q" placeholder="Search learner ID (e.g. L0042)"></div>
+          <div class="seg" id="quick">
+            <button class="active" data-q="all">All</button>
+            <button data-q="risk"><i data-lucide="triangle-alert"></i>At risk</button>
+            <button data-q="inactive"><i data-lucide="circle-pause"></i>Inactive &gt; 30 d</button>
+            <button data-q="top"><i data-lucide="trophy"></i>Top performers</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="table-wrap" style="max-height:640px"><table class="data compact" id="learnerTable"></table></div>
+        <div class="pager">
+          <span id="pageInfo"></span>
+          <div class="pager-btns">
+            <span class="muted">Rows</span>
+            <select id="pageSize" style="width:76px"><option>25</option><option>50</option><option>100</option></select>
+            <button class="btn sm" id="prevBtn"><i data-lucide="chevron-left"></i>Prev</button>
+            <button class="btn sm" id="nextBtn">Next<i data-lucide="chevron-right"></i></button>
+          </div>
         </div>
       </div>
     </div>
   </main>
 
   <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
   <script src="assets/data/data.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/charts.js"></script>
+  <script src="assets/js/filters.js"></script>
   <script src="assets/js/pages/learners.js"></script>
 </body>
 </html>

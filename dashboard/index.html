@@ -3,67 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Overview · DA-015 Learning Analytics</title>
+  <title>Executive Overview · DA-015 Learning Analytics</title>
   <meta name="description" content="DA-015 Online Learning Engagement Analysis dashboard">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="overview">
   <div class="loader"><div class="loader-ring"></div></div>
 
   <main class="content" id="content">
-    <section class="hero">
-      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
-      <h2>Online Learning Engagement Analysis</h2>
-      <p id="heroText">How do learners engage with online courses, and what separates those who finish from those who drop out?</p>
-      <div class="hero-tags" id="heroTags"></div>
-    </section>
-
-    <div class="kpi-grid" id="kpis"></div>
-
-    <div class="grid g-2-1">
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Completion rate by module</h3>
-          <p class="card-sub">Share of learners in each module who completed the course</p></div></div>
-        <div class="chart-box"><canvas id="moduleCompletion"></canvas></div>
+    <div class="page-head">
+      <div>
+        <h1>Executive Overview</h1>
+        <p>Engagement, completion and performance of the online learning cohort</p>
       </div>
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Completion status</h3>
-          <p class="card-sub">All learners</p></div></div>
-        <div class="chart-box"><canvas id="statusDonut"></canvas></div>
+      <div class="page-meta">
+        <span class="meta-chip"><i data-lucide="calendar-days"></i><span id="metaDate"></span></span>
+        <span class="meta-chip"><i data-lucide="database"></i><span id="metaRows"></span></span>
+        <a class="btn primary" href="insights.html"><i data-lucide="sparkles"></i>View insights</a>
       </div>
     </div>
 
-    <div class="grid g-2-1">
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Learning hours vs quiz score</h3>
-          <p class="card-sub" id="scatterSub">Each dot is one learner · dashed line = linear trend</p></div></div>
-        <div class="chart-box tall"><canvas id="hoursScatter"></canvas></div>
+    <div id="filterbar"></div>
+    <div class="kpis" id="kpis"></div>
+
+    <div class="grid g-2-1 stretch">
+      <div class="card" data-info="Completion rate = learners with status 'Completed' ÷ learners in the module.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Completion rate by module</h3>
+          <p class="card-sub">% of learners who completed the course</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="moduleCompletion"></canvas></div></div>
       </div>
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Key highlights</h3>
-          <p class="card-sub">Calculated from the cleaned dataset</p></div></div>
-        <div class="highlights" id="highlights"></div>
+      <div class="card" data-info="Share of learners by current course status.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Completion status</h3>
+          <p class="card-sub">Current status of selected learners</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="statusDonut"></canvas></div></div>
       </div>
     </div>
 
-    <div class="grid g2">
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Average quiz score by module</h3>
-          <p class="card-sub">Mean quiz score (0–100)</p></div></div>
-        <div class="chart-box"><canvas id="moduleQuiz"></canvas></div>
+    <div class="grid g-3-2 stretch">
+      <div class="card" data-info="Each point is one learner. Dashed line = least-squares trend; r = Pearson correlation for the current selection.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Learning hours vs quiz score</h3>
+          <p class="card-sub" id="scatterSub">Each point is one learner</p></div></div>
+        <div class="card-body"><div class="chart-box tall"><canvas id="hoursScatter"></canvas></div></div>
       </div>
       <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Engagement categories</h3>
-          <p class="card-sub">Learners per engagement level and their completion rate</p></div></div>
-        <div class="chart-box"><canvas id="engagementBars"></canvas></div>
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Learning progress funnel</h3>
+          <p class="card-sub">How far selected learners have progressed through their lessons</p></div></div>
+        <div class="card-body"><div class="funnel" id="funnel"></div>
+          <div class="card-note"><i data-lucide="info"></i><span>Based on lessons completed ÷ lessons available. Completed = course status "Completed".</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3">
+      <div class="card" data-info="Average quiz score (0–100) of learners in each module.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Average quiz score</h3><p class="card-sub">by module (0–100)</p></div></div>
+        <div class="card-body"><div class="chart-box short"><canvas id="moduleQuiz"></canvas></div></div>
+      </div>
+      <div class="card" data-info="Engagement category from the weighted engagement score (Low < 40, Medium 40–69.9, High ≥ 70).">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Engagement levels</h3><p class="card-sub">Learners per engagement category</p></div></div>
+        <div class="card-body"><div class="chart-box short"><canvas id="engagementBars"></canvas></div></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">At-risk learners</h3>
+          <p class="card-sub">In progress · Low engagement · inactive ≥ 14 days</p></div></div>
+        <div class="card-body"><div class="list" id="atRisk"></div></div>
       </div>
     </div>
   </main>
 
   <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
   <script src="assets/data/data.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/charts.js"></script>
+  <script src="assets/js/filters.js"></script>
   <script src="assets/js/pages/overview.js"></script>
 </body>
 </html>

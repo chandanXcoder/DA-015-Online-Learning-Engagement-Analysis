@@ -1,121 +1,134 @@
-/* Overview page - headline KPIs, module comparison, status split, highlights. */
+/* Executive Overview - KPIs, module comparison, status, scatter, funnel, at-risk list.
+   Everything is computed from the learner rows that pass the global filters. */
 DA.ready(function (D) {
-  const k = D.kpis;
-  const sortedModules = [...D.module].sort((a, b) => b.completion_rate_pct - a.completion_rate_pct);
-  const best = sortedModules[0], worst = sortedModules[sortedModules.length - 1];
-  const devices = [...D.device].sort((a, b) => b.completion_rate_pct - a.completion_rate_pct);
-  const high = DA.byName(D.engagement_outcomes, "High"), low = DA.byName(D.engagement_outcomes, "Low");
+  const M = D.meta;
+  const ALL = DA.summarise(D.learners);
+  let rows = DA.filters.rows();
 
-  /* hero */
-  DA.$("#heroText").innerHTML =
-    `Analysis of <b>${DA.int(k.total_learners)}</b> learners across <b>5 course modules</b>. ` +
-    `The overall completion rate is <b>${k.completion_rate_pct}%</b>, and engagement (activity, learning time and lesson progress) ` +
-    `turns out to be the strongest signal of who finishes.`;
-  DA.$("#heroTags").innerHTML = D.meta.modules.map((m) => `<span>${DA.esc(m)}</span>`).join("") +
-    `<span>${DA.int(D.meta.raw_rows)} raw → ${DA.int(D.meta.clean_rows)} clean records</span>`;
+  DA.$("#metaDate").textContent = `Data built ${M.generated}`;
+  DA.$("#metaRows").textContent = `${DA.int(M.raw_rows)} raw → ${DA.int(M.clean_rows)} clean rows`;
+  DA.filters.mount(DA.$("#filterbar"));
 
-  /* KPI cards */
-  DA.$("#kpis").innerHTML = [
-    { label: "Total learners", value: k.total_learners, icon: "users", color: "var(--c1)", note: "synthetic cohort, 5 modules" },
-    { label: "Completion rate", value: k.completion_rate_pct, decimals: 1, suffix: "%", icon: "award", color: "var(--c3)", note: `${DA.int(k.completed_learners)} learners completed` },
-    { label: "Dropout rate", value: k.dropout_rate_pct, decimals: 1, suffix: "%", icon: "trendDown", color: "var(--c2)", note: `${k.in_progress_pct}% still in progress` },
-    { label: "Avg quiz score", value: k.avg_quiz_score, decimals: 1, icon: "target", color: "var(--c1)", note: `median ${k.median_quiz_score}` },
-    { label: "Avg learning hours", value: k.avg_learning_hours, decimals: 1, icon: "clock", color: "var(--c4)", note: `${DA.int(k.total_learning_hours)} hours in total` },
-    { label: "Avg engagement score", value: k.avg_engagement_score, decimals: 1, icon: "activity", color: "var(--c5)", note: "0–100 composite score" },
-    { label: "Avg lesson progress", value: k.avg_lesson_progress_pct, decimals: 1, suffix: "%", icon: "layers", color: "var(--c3)", note: `videos watched ${k.avg_video_completion_pct}%` },
-    { label: `Inactive > ${D.meta.inactive_threshold_days} days`, value: k.inactive_pct, decimals: 1, suffix: "%", icon: "pause", color: "var(--c2)", note: `${DA.int(k.inactive_learners)} learners` },
-  ].map(DA.kpiCard).join("");
+  function renderKpis() {
+    const s = DA.summarise(rows);
+    DA.renderKpis(DA.$("#kpis"), [
+      { label: "Learners", icon: "users", color: "var(--c1)", value: s.learners, foot: DA.filters.active() ? `${DA.fmt((s.learners / ALL.learners) * 100)}% of cohort` : "5 modules · 4 devices",
+        help: "Unique learners after cleaning (duplicates removed).", meter: (s.learners / ALL.learners) * 100 },
+      { label: "Completion rate", icon: "circle-check-big", color: "var(--c3)", value: s.completion, decimals: 1, suffix: "%", meter: s.completion,
+        foot: DA.filters.active() ? "vs all learners" : `${DA.int(s.completed)} completed`, delta: { value: DA.vsAll(s.completion, ALL.completion), unit: " pts", higherIsBetter: true },
+        help: "Learners with status Completed ÷ learners." },
+      { label: "Dropout rate", icon: "user-x", color: "var(--c2)", value: s.dropout, decimals: 1, suffix: "%", meter: s.dropout,
+        foot: DA.filters.active() ? "vs all learners" : `${DA.fmt(s.inProgress)}% still in progress`, delta: { value: DA.vsAll(s.dropout, ALL.dropout), unit: " pts", higherIsBetter: false },
+        help: "Learners with status Dropped ÷ learners." },
+      { label: "Avg quiz score", icon: "target", color: "var(--c1)", value: s.quiz, decimals: 1, meter: s.quiz,
+        foot: DA.filters.active() ? "vs all learners" : "out of 100", delta: { value: DA.vsAll(s.quiz, ALL.quiz), higherIsBetter: true }, help: "Mean quiz score (0–100)." },
+      { label: "Avg learning hours", icon: "clock", color: "var(--c4)", value: s.hours, decimals: 1, suffix: " h",
+        foot: DA.filters.active() ? "vs all learners" : `${DA.int(s.totalHours)} h in total`, delta: { value: DA.vsAll(s.hours, ALL.hours), unit: " h", higherIsBetter: true },
+        help: "Mean total time spent on the platform." },
+      { label: "Engagement score", icon: "gauge", color: "var(--c5)", value: s.engagement, decimals: 1, meter: s.engagement,
+        foot: DA.filters.active() ? "vs all learners" : "0–100 composite", delta: { value: DA.vsAll(s.engagement, ALL.engagement), higherIsBetter: true },
+        help: "Weighted score of activity (35%), learning time (35%) and lesson progress (30%)." },
+    ]);
+  }
 
-  /* module completion */
-  DA.chart("moduleCompletion", (c) => ({
-    type: "bar",
-    data: { labels: sortedModules.map((m) => m.name), datasets: [DA.barDataset("Completion rate", sortedModules.map((m) => m.completion_rate_pct), c.series[0])] },
-    options: DA.barOptions({ suffix: "%" }),
-  }));
+  /* ---- charts (build functions read the current `rows`) ---- */
+  DA.chart("moduleCompletion", (c) => {
+    const g = DA.groupBy(rows, "course_module", M.modules).filter((x) => x.learners).sort((a, b) => b.completion - a.completion);
+    return {
+      type: "bar",
+      data: { labels: g.map((x) => x.name), datasets: [
+        DA.barDataset("Completion rate", g.map((x) => +x.completion.toFixed(1)), c.series[0]),
+        { type: "line", label: "Cohort average", data: g.map(() => +ALL.completion.toFixed(1)), borderColor: c.text3, borderDash: [5, 4], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 },
+      ] },
+      options: DA.barOptions({ suffix: "%", legend: true, tooltipExtra: (items) => { const x = g[items[0].dataIndex]; return x ? `\n ${x.completed} of ${x.learners} learners` : ""; } }),
+    };
+  });
 
-  /* status doughnut */
-  DA.chart("statusDonut", (c) => ({
-    type: "doughnut",
-    data: {
-      labels: D.status.map((s) => s.name),
-      datasets: [{ data: D.status.map((s) => s.learners), backgroundColor: D.status.map((s) => c.status[s.name]),
-        borderColor: c.surface, borderWidth: 3, hoverOffset: 8 }],
-    },
-    options: {
-      cutout: "68%",
-      animation: { animateRotate: true, duration: 1400 },
-      plugins: {
-        legend: { position: "bottom" },
-        centerText: { text: `${k.completion_rate_pct}%`, sub: "completed" },
-        tooltip: { callbacks: { label: (ctx) => ` ${ctx.label}: ${DA.int(ctx.parsed)} learners (${D.status[ctx.dataIndex].percent}%)` } },
+  DA.chart("statusDonut", (c) => {
+    const counts = M.statuses.map((s) => rows.filter((r) => r.completion_status === s).length);
+    const n = rows.length || 1;
+    return {
+      type: "doughnut",
+      data: { labels: M.statuses, datasets: [{ data: counts, backgroundColor: M.statuses.map((s) => c.status[s]), borderColor: c.surface, borderWidth: 3, hoverOffset: 6 }] },
+      options: DA.doughnutOptions(`${DA.fmt((counts[0] / n) * 100)}%`, "completed", (ctx) => ` ${ctx.label}: ${DA.int(ctx.parsed)} (${DA.fmt((ctx.parsed / n) * 100)}%)`),
+    };
+  });
+
+  DA.chart("hoursScatter", (c) => {
+    const xs = rows.map((r) => r.time_spent_hours), ys = rows.map((r) => r.quiz_score);
+    const fit = DA.linreg(xs, ys), maxX = Math.max(1, ...xs), r = DA.pearson(xs, ys);
+    DA.$("#scatterSub").textContent = `Each point is one learner · Pearson r = ${isFinite(r) ? r.toFixed(2) : "–"} · n = ${DA.int(rows.length)}`;
+    return {
+      type: "scatter",
+      data: { datasets: M.statuses.map((s) => ({
+        label: s, data: rows.filter((l) => l.completion_status === s).map((l) => ({ x: l.time_spent_hours, y: l.quiz_score, id: l.learner_id })),
+        backgroundColor: DA.alpha(c.status[s], 0.55), borderColor: DA.alpha(c.status[s], 0.9), borderWidth: 0.5, pointRadius: 3.5, pointHoverRadius: 7,
+      })).concat([{ type: "line", label: "Trend", data: [{ x: 0, y: fit.a }, { x: maxX, y: fit.a + fit.b * maxX }],
+        borderColor: c.text2, borderDash: [6, 5], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 }]) },
+      options: {
+        onClick: (e, els, chart) => { const el = els[0]; if (!el) return; const p = chart.data.datasets[el.datasetIndex].data[el.index]; if (p.id) DA.openLearner(p.id); },
+        plugins: { legend: { position: "bottom", align: "start" },
+          tooltip: { callbacks: { label: (ctx) => ctx.raw.id ? ` ${ctx.raw.id} · ${ctx.dataset.label}` : " Linear trend",
+            afterLabel: (ctx) => ctx.raw.id ? ` ${ctx.raw.x} h · quiz ${ctx.raw.y} · click for profile` : "" } } },
+        scales: { x: { beginAtZero: true, title: { display: true, text: "Time spent (hours)", color: c.text3 } },
+                  y: { min: 0, max: 100, title: { display: true, text: "Quiz score", color: c.text3 } } },
       },
-    },
-  }));
+    };
+  });
 
-  /* hours vs quiz scatter, coloured by status */
-  const reg = D.regression;
-  DA.$("#scatterSub").textContent = `Each dot is one learner · dashed line = linear trend (Pearson r = ${reg.r.toFixed(2)})`;
-  const maxHours = Math.max(...D.learners.map((l) => l.time_spent_hours));
-  DA.chart("hoursScatter", (c) => ({
-    type: "scatter",
-    data: {
-      datasets: D.meta.statuses.map((s) => ({
-        label: s,
-        data: D.learners.filter((l) => l.completion_status === s).map((l) => ({ x: l.time_spent_hours, y: l.quiz_score, id: l.learner_id })),
-        backgroundColor: DA.alpha(c.status[s], 0.6), borderColor: c.surface, borderWidth: 0.5, pointRadius: 4, pointHoverRadius: 7,
-      })).concat([{
-        type: "line", label: "Trend", data: [{ x: 0, y: reg.intercept }, { x: maxHours, y: reg.intercept + reg.slope * maxHours }],
-        borderColor: c.text2, borderDash: [6, 5], borderWidth: 2, pointRadius: 0, pointHoverRadius: 0,
-      }]),
-    },
-    options: {
-      plugins: {
-        legend: { position: "bottom" },
-        tooltip: { callbacks: { label: (ctx) => ctx.raw.id ? ` ${ctx.raw.id} · ${ctx.dataset.label}: ${ctx.raw.x} h, score ${ctx.raw.y}` : " Linear trend" } },
-      },
-      scales: {
-        x: { title: { display: true, text: "Time spent (hours)" }, beginAtZero: true },
-        y: { title: { display: true, text: "Quiz score" }, min: 0, max: 100 },
-      },
-    },
-  }));
+  function renderFunnel() {
+    const n = rows.length;
+    const steps = [
+      { name: "Enrolled", icon: "user-plus", v: n },
+      { name: "Started (≥ 1 lesson)", icon: "play", v: rows.filter((r) => r.lessons_completed > 0).length },
+      { name: "≥ 25% of lessons", icon: "chart-no-axes-column", v: rows.filter((r) => r.lesson_progress_pct >= 25).length },
+      { name: "≥ 50% of lessons", icon: "chart-no-axes-column-increasing", v: rows.filter((r) => r.lesson_progress_pct >= 50).length },
+      { name: "≥ 75% of lessons", icon: "trending-up", v: rows.filter((r) => r.lesson_progress_pct >= 75).length },
+      { name: "Completed", icon: "trophy", v: rows.filter((r) => r.completion_status === "Completed").length },
+    ];
+    const cols = ["var(--eng-low)", "var(--eng-low)", "var(--eng-med)", "var(--eng-med)", "var(--eng-high)", "var(--c3)"];
+    DA.$("#funnel").innerHTML = steps.map((s, i) => `
+      <div class="f-row"><span class="f-name">${DA.icon(s.icon)}${s.name}</span>
+        <div class="f-bar"><i data-w="${n ? ((s.v / n) * 100).toFixed(1) : 0}" style="background:${cols[i]}"></i></div>
+        <span class="f-val" title="${i && steps[i - 1].v ? DA.fmt((s.v / steps[i - 1].v) * 100) + "% of previous step" : ""}"><b>${DA.int(s.v)}</b><small>${n ? DA.fmt((s.v / n) * 100) : "–"}%</small></span></div>`).join("");
+    DA.paintIcons();
+    DA.fillBars(DA.$("#funnel"));
+  }
 
-  /* highlights */
-  const items = [
-    { icon: "award", color: "var(--c3)", title: `${best.name} leads on completion`, text: `${best.completion_rate_pct}% completion vs ${worst.completion_rate_pct}% for ${worst.name} (lowest).` },
-    { icon: "zap", color: "var(--c1)", title: "Engagement separates outcomes", text: high && low ? `High-engagement learners score ${high.avg_quiz_score} on quizzes vs ${low.avg_quiz_score} for low engagement.` : "" },
-    { icon: "monitor", color: "var(--c2)", title: `${devices[devices.length - 1].name} learners finish least`, text: `${devices[devices.length - 1].completion_rate_pct}% completion vs ${devices[0].completion_rate_pct}% on ${devices[0].name}.` },
-    { icon: "clock", color: "var(--c4)", title: "More time, better scores", text: `Learning hours and quiz score correlate at r = ${reg.r.toFixed(2)} (moderate, positive).` },
-    { icon: "pause", color: "var(--c5)", title: "Inactivity is widespread", text: `${DA.int(k.inactive_learners)} learners (${k.inactive_pct}%) have been inactive for more than ${D.meta.inactive_threshold_days} days.` },
-  ];
-  DA.$("#highlights").innerHTML = items.map((h) => `
-    <div class="hl"><div class="hl-icon" style="background:${h.color}">${DA.icons[h.icon]}</div>
-    <div><b>${DA.esc(h.title)}</b><span>${DA.esc(h.text)}</span></div></div>`).join("") +
-    `<a class="btn" href="insights.html" style="align-self:flex-start">${DA.icons.bulb} See all insights</a>`;
+  DA.chart("moduleQuiz", (c) => {
+    const g = DA.groupBy(rows, "course_module", M.modules).filter((x) => x.learners).sort((a, b) => b.quiz - a.quiz);
+    return { type: "bar", data: { labels: g.map((x) => x.name), datasets: [DA.barDataset("Avg quiz score", g.map((x) => +x.quiz.toFixed(1)), c.series[0])] },
+      options: DA.barOptions({ horizontal: true, max: 100 }) };
+  });
 
-  /* module quiz */
-  const byQuiz = [...D.module].sort((a, b) => b.avg_quiz_score - a.avg_quiz_score);
-  DA.chart("moduleQuiz", (c) => ({
-    type: "bar",
-    data: { labels: byQuiz.map((m) => m.name), datasets: [DA.barDataset("Avg quiz score", byQuiz.map((m) => m.avg_quiz_score), c.series[0])] },
-    options: DA.barOptions({ max: 100 }),
-  }));
+  DA.chart("engagementBars", (c) => {
+    const g = DA.groupBy(rows, "engagement_category", M.engagement_labels);
+    return {
+      type: "bar",
+      data: { labels: g.map((x) => x.name), datasets: [DA.barDataset("Learners", g.map((x) => x.learners), g.map((x) => c.eng[x.name]))] },
+      options: DA.barOptions({ decimals: 0, tooltipExtra: (items) => { const x = g[items[0].dataIndex]; return x.learners ? `\n Completion: ${DA.fmt(x.completion)}%\n Avg quiz: ${DA.fmt(x.quiz)}` : ""; } }),
+    };
+  });
 
-  /* engagement categories: learner count per level (ordinal colours) */
-  DA.chart("engagementBars", (c) => ({
-    type: "bar",
-    data: {
-      labels: D.engagement_outcomes.map((e) => e.name),
-      datasets: [DA.barDataset("Learners", D.engagement_outcomes.map((e) => e.learners), D.engagement_outcomes.map((e) => c.eng[e.name]))],
-    },
-    options: (() => {
-      const o = DA.barOptions({ decimals: 0 });
-      o.plugins.tooltip.callbacks.afterLabel = (ctx) => {
-        const e = D.engagement_outcomes[ctx.dataIndex];
-        return ` Completion rate: ${e.completion_rate_pct}%\n Avg quiz score: ${e.avg_quiz_score}`;
-      };
-      o.scales.y.title = { display: true, text: "Learners" };
-      return o;
-    })(),
-  }));
+  function renderAtRisk() {
+    // Transparent rule: still In Progress, Low engagement, and no activity for 14+ days.
+    const list = rows.filter(DA.isAtRisk).sort((a, b) => a.engagement_score - b.engagement_score);
+    DA.$("#atRisk").innerHTML = list.length ? list.slice(0, 5).map((r) => `
+      <div class="li clickable" data-id="${r.learner_id}"><span class="avatar">${r.learner_id.slice(-3)}</span>
+        <div class="txt"><b>${r.learner_id} · ${DA.esc(r.course_module)}</b><span>${r.lessons_completed}/${r.lessons_available} lessons · inactive ${r.last_active_days} days</span></div>
+        <div class="end"><b>${DA.fmt(r.engagement_score)}</b>engagement</div></div>`).join("") +
+      `<a class="btn sm" style="margin-top:10px;align-self:flex-start" href="learners.html#risk=1">${DA.icon("arrow-right")}View all ${DA.int(list.length)} at-risk learners</a>`
+      : `<div class="empty">${DA.icon("shield-check")}No at-risk learners in this selection</div>`;
+    DA.$$("#atRisk .li").forEach((li) => li.addEventListener("click", () => DA.openLearner(li.dataset.id)));
+    DA.paintIcons();
+  }
+
+  function renderAll() {
+    renderKpis();
+    renderFunnel();
+    renderAtRisk();
+    DA.refreshCharts(["moduleCompletion", "statusDonut", "hoursScatter", "moduleQuiz", "engagementBars"]);
+  }
+  DA.filters.onChange((r) => { rows = r; renderAll(); });
+  renderKpis(); renderFunnel(); renderAtRisk();
 });

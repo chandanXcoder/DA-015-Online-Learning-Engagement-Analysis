@@ -1,115 +1,102 @@
-/* Engagement page - score model, distribution, outcomes, module mix, correlation heatmap. */
+/* Engagement - score model, distribution, outcomes, module mix, scatter and live correlation matrix. */
 DA.ready(function (D) {
-  const w = D.meta.engagement_weights;
-  const t = D.meta.engagement_thresholds;
-  const labels = D.meta.engagement_labels;
-  const out = labels.map((l) => DA.byName(D.engagement_outcomes, l) || { name: l, learners: 0 });
+  const M = D.meta, w = M.engagement_weights, t = M.engagement_thresholds, L = M.engagement_labels;
+  let rows = DA.filters.rows();
+  DA.filters.mount(DA.$("#filterbar"));
 
-  /* formula + animated weight bars */
-  DA.$("#formula").textContent =
-    `score = 100 × (${w.activity_count}·activity + ${w.time_spent_hours}·time + ${w.lesson_progress_pct}·lesson progress)`;
-  const nice = { activity_count: "Activity count", time_spent_hours: "Learning time", lesson_progress_pct: "Lesson progress" };
-  DA.$("#weights").innerHTML = Object.entries(w).map(([key, val], i) => `
-    <div class="weight-row"><span>${nice[key] || key}</span>
-      <div class="bar-track"><div class="bar-fill" data-w="${val * 100}" style="background:var(--c${i + 1})"></div></div>
-      <b>${Math.round(val * 100)}%</b></div>`).join("");
-  DA.$("#thresholds").innerHTML =
-    `<span class="badge b-low">Low &lt; ${t.medium}</span><span class="badge b-medium">Medium ${t.medium}–${t.high - 0.1}</span><span class="badge b-high">High ≥ ${t.high}</span>`;
-  const clip = D.meta.normalise_clip;
-  DA.$("#formulaNote").innerHTML = `Each input is clipped to its ${clip[0] * 100}th–${clip[1] * 100}th percentile and scaled to 0–1. ` +
-    `Quiz score and completion are <b>not</b> in the formula, so the charts below test the score against independent outcomes.`;
+  /* ---- model card (static) ---- */
+  DA.$("#formula").innerHTML = `score = 100 × (<b>${w.activity_count}</b>·activity + <b>${w.time_spent_hours}</b>·time + <b>${w.lesson_progress_pct}</b>·lesson progress)`;
+  const META = { activity_count: ["Activity count", "mouse-pointer-click", "var(--c1)"], time_spent_hours: ["Learning time", "clock", "var(--c2)"], lesson_progress_pct: ["Lesson progress", "list-checks", "var(--c3)"] };
+  DA.$("#weights").innerHTML = Object.entries(w).map(([k, v]) => `
+    <div class="w-row" style="--wc:${META[k][2]}"><span class="wi">${DA.icon(META[k][1])}</span><span>${META[k][0]}</span>
+      <div class="bar-track"><div class="bar-fill" data-w="${v * 100}" style="background:${META[k][2]}"></div></div><b>${Math.round(v * 100)}%</b></div>`).join("");
+  DA.$("#thresholds").innerHTML = `<span class="badge b-low">Low &lt; ${t.medium}</span><span class="badge b-medium">Medium ${t.medium}–${(t.high - 0.1).toFixed(1)}</span><span class="badge b-high">High ≥ ${t.high}</span>`;
+  DA.$("#formulaNote").textContent = `Each input is clipped to its ${M.normalise_clip[0] * 100}th–${M.normalise_clip[1] * 100}th percentile, then scaled to 0–1. Bars show each input's weight.`;
 
-  /* category KPI cards */
-  const total = D.kpis.total_learners;
-  const catColor = { Low: "var(--eng-low)", Medium: "var(--eng-med)", High: "var(--eng-high)" };
-  DA.$("#engKpis").innerHTML = out.map((o) => DA.kpiCard({
-    label: `${o.name} engagement`, value: o.learners, icon: o.name === "High" ? "zap" : o.name === "Medium" ? "activity" : "pause",
-    color: catColor[o.name], note: `${DA.fmt((o.learners / total) * 100)}% of learners · avg score ${DA.fmt(o.avg_engagement_score)}`,
-  })).join("");
+  function renderKpis() {
+    const g = DA.groupBy(rows, "engagement_category", L), n = rows.length || 1;
+    const icon = { Low: "battery-low", Medium: "battery-medium", High: "battery-full" };
+    const col = { Low: "var(--eng-low)", Medium: "var(--eng-med)", High: "var(--eng-high)" };
+    DA.renderKpis(DA.$("#engKpis"), g.map((x) => ({
+      label: `${x.name} engagement`, icon: icon[x.name], color: col[x.name], value: x.learners, meter: (x.learners / n) * 100,
+      foot: `${DA.fmt((x.learners / n) * 100)}% of learners · ${x.learners ? `completion ${DA.fmt(x.completion)}%` : "–"}`,
+      help: x.name === "Low" ? `Score below ${t.medium}` : x.name === "Medium" ? `Score ${t.medium}–${t.high - 0.1}` : `Score ${t.high} or above`,
+    })));
+  }
 
-  /* score histogram coloured by category */
   DA.chart("scoreHist", (c) => {
-    const h = DA.histogram(D.learners.map((l) => l.engagement_score), 0, 100, 5);
-    const colors = h.labels.map((_, i) => { const lo = i * 5; return lo >= t.high ? c.eng.High : lo >= t.medium ? c.eng.Medium : c.eng.Low; });
-    const o = DA.barOptions({ decimals: 0 });
-    o.scales.x.title = { display: true, text: "Engagement score" };
-    o.scales.y.title = { display: true, text: "Learners" };
-    o.scales.x.ticks = { maxRotation: 0, autoSkip: true, autoSkipPadding: 8 };
-    return { type: "bar", data: { labels: h.labels, datasets: [DA.barDataset("Learners", h.counts, colors, { categoryPercentage: 0.95, barPercentage: 1, borderRadius: 4 })] }, options: o };
+    const h = DA.histogram(rows.map((r) => r.engagement_score), 0, 100, 5);
+    const colors = h.labels.map((_, i) => (i * 5 >= t.high ? c.eng.High : i * 5 >= t.medium ? c.eng.Medium : c.eng.Low));
+    const o = DA.barOptions({ decimals: 0, xTitle: "Engagement score", yTitle: "Learners" });
+    o.scales.x.ticks = { maxRotation: 0, autoSkip: true, autoSkipPadding: 10 };
+    return { type: "bar", data: { labels: h.labels, datasets: [DA.barDataset("Learners", h.counts, colors, { categoryPercentage: 0.94, barPercentage: 1, borderRadius: 3 })] }, options: o };
   });
 
-  /* outcomes by category */
-  const outcome = (id, field, label, suffix, max) => DA.chart(id, (c) => ({
-    type: "bar",
-    data: { labels, datasets: [DA.barDataset(label, out.map((o) => o[field]), labels.map((l) => c.eng[l]))] },
-    options: DA.barOptions({ suffix, max }),
-  }));
-  outcome("outComp", "completion_rate_pct", "Completion rate", "%", 100);
-  outcome("outQuiz", "avg_quiz_score", "Avg quiz score", "", 100);
-  outcome("outInactive", "inactive_pct", "Inactive learners", "%", 100);
+  const outcome = (id, field, label, suffix) => DA.chart(id, (c) => {
+    const g = DA.groupBy(rows, "engagement_category", L);
+    return { type: "bar", data: { labels: L, datasets: [DA.barDataset(label, g.map((x) => (x.learners ? +x[field].toFixed(1) : 0)), L.map((l) => c.eng[l]))] },
+      options: DA.barOptions({ suffix, max: 100, tooltipExtra: (items) => `\n n = ${g[items[0].dataIndex].learners} learners` }) };
+  });
+  outcome("outComp", "completion", "Completion rate", "%");
+  outcome("outQuiz", "quiz", "Avg quiz score", "");
+  outcome("outInactive", "inactive", "Inactive learners", "%");
 
-  /* engagement mix by module (stacked) */
-  const em = [...D.engagement_module].sort((a, b) => b.High - a.High);
-  DA.chart("engModule", (c) => ({
-    type: "bar",
-    data: { labels: em.map((r) => r.name), datasets: labels.map((l) =>
-      DA.barDataset(l, em.map((r) => r[l]), c.eng[l], { borderRadius: 0, borderWidth: { right: 2 }, borderColor: c.surface })) },
-    options: DA.barOptions({ horizontal: true, stacked: true, suffix: "%", legend: true, max: 100 }),
-  }));
+  DA.chart("engModule", (c) => {
+    const mods = M.modules.filter((m) => rows.some((r) => r.course_module === m));
+    const share = (m, l) => { const r = rows.filter((x) => x.course_module === m); return r.length ? +((r.filter((x) => x.engagement_category === l).length / r.length) * 100).toFixed(1) : 0; };
+    mods.sort((a, b) => share(b, "High") - share(a, "High"));
+    return { type: "bar", data: { labels: mods, datasets: L.map((l) => DA.barDataset(l, mods.map((m) => share(m, l)), c.eng[l], { borderRadius: 0, borderWidth: { right: 2 }, borderColor: c.surface, borderSkipped: false })) },
+      options: DA.barOptions({ horizontal: true, stacked: true, suffix: "%", legend: true, max: 100 }) };
+  });
 
-  /* engagement vs quiz scatter */
-  DA.chart("engScatter", (c) => ({
-    type: "scatter",
-    data: { datasets: labels.map((l) => ({
-      label: l, data: D.learners.filter((r) => r.engagement_category === l).map((r) => ({ x: r.engagement_score, y: r.quiz_score, id: r.learner_id })),
-      backgroundColor: DA.alpha(c.eng[l].startsWith("#") ? c.eng[l] : "#5b9be3", 0.7), pointRadius: 3.5, pointHoverRadius: 7, borderWidth: 0,
-    })) },
-    options: {
-      plugins: { legend: { position: "bottom" },
-        tooltip: { callbacks: { label: (ctx) => ` ${ctx.raw.id} · engagement ${ctx.raw.x}, quiz ${ctx.raw.y}` } } },
-      scales: { x: { min: 0, max: 100, title: { display: true, text: "Engagement score" } },
-                y: { min: 0, max: 100, title: { display: true, text: "Quiz score" } } },
-    },
-  }));
+  DA.chart("engScatter", (c) => {
+    const r = DA.pearson(rows.map((x) => x.engagement_score), rows.map((x) => x.quiz_score));
+    DA.$("#engScatterSub").textContent = `Each point is one learner · Pearson r = ${isFinite(r) ? r.toFixed(2) : "–"}`;
+    return {
+      type: "scatter",
+      data: { datasets: L.map((l) => ({ label: l, data: rows.filter((x) => x.engagement_category === l).map((x) => ({ x: x.engagement_score, y: x.quiz_score, id: x.learner_id })),
+        backgroundColor: DA.alpha(c.eng[l], 0.7), pointRadius: 3.2, pointHoverRadius: 7, borderWidth: 0 })) },
+      options: {
+        onClick: (e, els, chart) => { const el = els[0]; if (el) DA.openLearner(chart.data.datasets[el.datasetIndex].data[el.index].id); },
+        plugins: { legend: { position: "bottom", align: "start" }, tooltip: { callbacks: { label: (ctx) => ` ${ctx.raw.id} · engagement ${ctx.raw.x} · quiz ${ctx.raw.y}` } } },
+        scales: { x: { min: 0, max: 100, title: { display: true, text: "Engagement score", color: c.text3 } }, y: { min: 0, max: 100, title: { display: true, text: "Quiz score", color: c.text3 } } },
+      },
+    };
+  });
 
-  /* correlation heatmap (HTML grid so every cell is labelled) */
-  const names = { time_spent_hours: "Learning hours", activity_count: "Activity count", lesson_progress_pct: "Lesson progress",
-    video_completion_pct: "Video completion", quiz_score: "Quiz score", last_active_days: "Days since active",
-    engagement_score: "Engagement score", is_completed: "Completed (0/1)" };
-  const L = D.correlation.labels, M = D.correlation.matrix;
+  /* ---- live correlation matrix ---- */
+  const VARS = [["time_spent_hours", "Learning hours"], ["activity_count", "Activity"], ["lesson_progress_pct", "Lesson progress"], ["video_completion_pct", "Video completion"],
+    ["quiz_score", "Quiz score"], ["last_active_days", "Days inactive"], ["engagement_score", "Engagement"], ["is_completed", "Completed (0/1)"]];
+  const val = (r, k) => (k === "is_completed" ? (r.completion_status === "Completed" ? 1 : 0) : r[k]);
   function cellColor(v) {
     const dark = document.documentElement.getAttribute("data-theme") === "dark";
-    const neutral = dark ? [38, 42, 49] : [242, 241, 238];
-    const pos = dark ? [217, 89, 38] : [196, 80, 31];
-    const neg = dark ? [57, 135, 229] : [28, 90, 166];
-    const target = v >= 0 ? pos : neg;
-    const a = Math.min(1, Math.abs(v));
+    const neutral = dark ? [32, 37, 44] : [244, 245, 247], pos = dark ? [217, 89, 38] : [196, 80, 31], neg = dark ? [57, 135, 229] : [28, 90, 166];
+    const a = isFinite(v) ? Math.min(1, Math.abs(v)) : 0, target = v >= 0 ? pos : neg;
     const rgb = neutral.map((n, i) => Math.round(n + (target[i] - n) * a));
-    const lum = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
-    return { bg: `rgb(${rgb.join(",")})`, fg: lum > 0.6 ? "#121417" : "#ffffff" };
+    return { bg: `rgb(${rgb.join(",")})`, fg: (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255 > 0.6 ? "#101828" : "#ffffff", neutral, pos, neg };
   }
   function renderHeatmap() {
+    const cols = VARS.map(([k]) => rows.map((r) => val(r, k)));
+    const m = VARS.map((_, i) => VARS.map((__, j) => (i === j ? 1 : DA.pearson(cols[i], cols[j]))));
     const hm = DA.$("#heatmap");
-    hm.style.gridTemplateColumns = `max-content repeat(${L.length}, minmax(52px, 1fr))`;
-    let html = "";
-    L.forEach((row, i) => {
-      html += `<div class="hm-label">${names[row] || row}</div>`;
-      L.forEach((col, j) => {
-        const v = M[i][j];
-        const { bg, fg } = cellColor(v);
-        html += `<div class="hm-cell" style="background:${bg};color:${fg};transition-delay:${((i + j) * 0.025).toFixed(3)}s"
-          title="${names[row] || row} × ${names[col] || col}: r = ${v.toFixed(2)}">${v.toFixed(2)}</div>`;
-      });
-    });
-    html += `<div></div>` + L.map((col) => `<div class="hm-label hm-col">${names[col] || col}</div>`).join("");
-    hm.innerHTML = html;
+    hm.style.gridTemplateColumns = `max-content repeat(${VARS.length}, minmax(56px, 1fr))`;
+    hm.innerHTML = VARS.map(([, a], i) => `<div class="hm-label">${a}</div>` + VARS.map(([, b], j) => {
+      const v = m[i][j], { bg, fg } = cellColor(v);
+      return `<div class="hm-cell" style="background:${bg};color:${fg};transition-delay:${((i + j) * 0.02).toFixed(2)}s" title="${a} × ${b}: r = ${isFinite(v) ? v.toFixed(2) : "n/a"}">${isFinite(v) ? v.toFixed(2) : "–"}</div>`;
+    }).join("")).join("") + `<div></div>` + VARS.map(([, b]) => `<div class="hm-label hm-col">${b}</div>`).join("");
+    const k = cellColor(0);
+    DA.$("#hmScale").style.background = `linear-gradient(90deg, rgb(${k.neg}), rgb(${k.neutral}), rgb(${k.pos}))`;
+    const idx = (key) => VARS.findIndex(([x]) => x === key);
+    DA.$("#corrNote").textContent = rows.length > 2
+      ? `Quiz score correlates most with lesson progress (r = ${m[idx("lesson_progress_pct")][idx("quiz_score")].toFixed(2)}). Correlation ≠ causation. n = ${DA.int(rows.length)}.`
+      : "Select more learners to compute correlations.";
   }
-  renderHeatmap();
-  document.addEventListener("themechange", renderHeatmap);
 
-  const r = (a, b) => M[L.indexOf(a)][L.indexOf(b)];
-  DA.$("#corrNote").innerHTML =
-    `Strongest link with quiz score: lesson progress (r = ${r("lesson_progress_pct", "quiz_score").toFixed(2)}). ` +
-    `Activity vs completion r = ${r("activity_count", "is_completed").toFixed(2)}; days since last active vs completion r = ${r("last_active_days", "is_completed").toFixed(2)}. ` +
-    `Correlation shows association, not causation.`;
+  function renderAll() {
+    renderKpis(); renderHeatmap();
+    DA.refreshCharts(["scoreHist", "outComp", "outQuiz", "outInactive", "engModule", "engScatter"]);
+  }
+  DA.filters.onChange((r) => { rows = r; renderAll(); });
+  document.addEventListener("themechange", renderHeatmap);
+  renderKpis(); renderHeatmap();
 });

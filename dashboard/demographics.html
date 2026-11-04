@@ -4,68 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Devices &amp; Age · DA-015 Learning Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="demographics">
   <div class="loader"><div class="loader-ring"></div></div>
 
   <main class="content" id="content">
-    <div class="toolbar">
-      <div class="seg" id="metricSeg">
-        <button class="active" data-metric="completion_rate_pct">Completion rate</button>
-        <button data-metric="dropout_rate_pct">Dropout rate</button>
-        <button data-metric="avg_quiz_score">Avg quiz score</button>
-        <button data-metric="avg_hours">Avg hours</button>
-        <button data-metric="avg_engagement_score">Engagement score</button>
+    <div class="page-head">
+      <div><h1>Devices &amp; Age Groups</h1><p>How learning outcomes differ by the device used and by learner age</p></div>
+      <div class="page-meta"><div class="seg" id="metricSeg">
+        <button class="active" data-metric="completion"><i data-lucide="circle-check-big"></i>Completion</button>
+        <button data-metric="dropout"><i data-lucide="user-x"></i>Dropout</button>
+        <button data-metric="quiz"><i data-lucide="target"></i>Quiz score</button>
+        <button data-metric="hours"><i data-lucide="clock"></i>Hours</button>
+        <button data-metric="engagement"><i data-lucide="gauge"></i>Engagement</button>
+      </div></div>
+    </div>
+
+    <div id="filterbar"></div>
+    <div class="kpis k4" id="devKpis"></div>
+
+    <div class="section-head"><h2>Device type</h2><span class="line"></span></div>
+    <div class="grid g-2-1 stretch">
+      <div class="card" data-info="Selected metric for each device. Dashed line = value for all selected learners.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title" id="deviceTitle">Completion by device</h3><p class="card-sub">Switch the metric at the top right</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="deviceMetric"></canvas></div></div>
+      </div>
+      <div class="card" data-info="Number of selected learners using each device.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Learners by device</h3><p class="card-sub">Share of selection</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="deviceShare"></canvas></div></div>
       </div>
     </div>
 
-    <h2 class="section-title">Device type</h2>
-    <div class="grid g-2-1">
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title" id="deviceTitle">Completion rate by device</h3>
-          <p class="card-sub">Use the buttons above to switch the metric</p></div></div>
-        <div class="chart-box"><canvas id="deviceMetric"></canvas></div>
+    <div class="section-head"><h2>Age group</h2><span class="line"></span></div>
+    <div class="grid g-2-1 stretch">
+      <div class="card" data-info="Selected metric for each age group. Dashed line = value for all selected learners.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title" id="ageTitle">Completion by age group</h3><p class="card-sub">Switch the metric at the top right</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="ageMetric"></canvas></div></div>
       </div>
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Learners by device</h3><p class="card-sub">Share of the cohort</p></div></div>
-        <div class="chart-box"><canvas id="deviceShare"></canvas></div>
+      <div class="card" data-info="Number of selected learners in each age group.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Learners by age group</h3><p class="card-sub">Share of selection</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="ageShare"></canvas></div></div>
       </div>
-    </div>
-    <div class="card" style="margin-bottom:20px">
-      <div class="card-head"><div><h3 class="card-title">Device summary</h3></div></div>
-      <div class="table-wrap"><table class="data" id="deviceTable"></table></div>
     </div>
 
-    <h2 class="section-title">Age group</h2>
-    <div class="grid g-2-1">
+    <div class="grid g2">
       <div class="card">
-        <div class="card-head"><div><h3 class="card-title" id="ageTitle">Completion rate by age group</h3>
-          <p class="card-sub">Use the buttons above to switch the metric</p></div></div>
-        <div class="chart-box"><canvas id="ageMetric"></canvas></div>
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Device summary</h3><p class="card-sub">All metrics for the current selection</p></div></div>
+        <div class="card-body"><div class="table-wrap"><table class="data compact" id="deviceTable"></table></div></div>
       </div>
       <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Learners by age group</h3><p class="card-sub">Share of the cohort</p></div></div>
-        <div class="chart-box"><canvas id="ageShare"></canvas></div>
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Age-group summary</h3><p class="card-sub">All metrics for the current selection</p></div></div>
+        <div class="card-body"><div class="table-wrap"><table class="data compact" id="ageTable"></table></div></div>
       </div>
-    </div>
-    <div class="card" style="margin-bottom:20px">
-      <div class="card-head"><div><h3 class="card-title">Age-group summary</h3></div></div>
-      <div class="table-wrap"><table class="data" id="ageTable"></table></div>
     </div>
 
-    <h2 class="section-title">Device × module</h2>
     <div class="card">
-      <div class="card-head"><div><h3 class="card-title">Completion rate by device and module</h3>
-        <p class="card-sub">Darker = higher completion · n = learners in each cell (small cells are less reliable)</p></div></div>
-      <div class="heatmap" id="crossHeat"></div>
+      <div class="card-head"><div class="ttl"><h3 class="card-title" id="crossTitle">Completion by device × module</h3>
+        <p class="card-sub">Darker = higher value · n = learners per cell (small cells are less reliable)</p></div></div>
+      <div class="card-body"><div class="heatmap" id="crossHeat"></div></div>
     </div>
   </main>
 
   <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
   <script src="assets/data/data.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/charts.js"></script>
+  <script src="assets/js/filters.js"></script>
   <script src="assets/js/pages/demographics.js"></script>
 </body>
 </html>

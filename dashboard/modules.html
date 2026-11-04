@@ -4,65 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Course Modules · DA-015 Learning Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="modules">
   <div class="loader"><div class="loader-ring"></div></div>
 
   <main class="content" id="content">
+    <div class="page-head">
+      <div><h1>Course Modules</h1><p>Compare performance across the five modules and drill into any one of them</p></div>
+      <div class="page-meta"><button class="btn" id="exportModules"><i data-lucide="file-spreadsheet"></i>Export scorecard</button></div>
+    </div>
+
+    <div id="filterbar"></div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-head"><div class="ttl"><h3 class="card-title">Module scorecard</h3>
+        <p class="card-sub">Click a column to sort · click a row to open the deep-dive · rates are % of learners</p></div></div>
+      <div class="card-body"><div class="table-wrap"><table class="data" id="scorecard"></table></div></div>
+    </div>
+
+    <div class="grid g2 stretch">
+      <div class="card" data-info="Completion and dropout rate per module. Both use the same % scale.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Completion vs dropout</h3><p class="card-sub">% of learners per module</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="compDrop"></canvas></div></div>
+      </div>
+      <div class="card" data-info="100% stacked bars: the share of Completed, In Progress and Dropped learners in each module.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Status mix</h3><p class="card-sub">100% stacked · share of each status</p></div></div>
+        <div class="card-body"><div class="chart-box"><canvas id="statusMix"></canvas></div></div>
+      </div>
+    </div>
+
+    <div class="grid g3 stretch">
+      <div class="card" data-info="Mean quiz score per module.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Average quiz score</h3><p class="card-sub">0–100</p></div></div>
+        <div class="card-body"><div class="chart-box short"><canvas id="quizBar"></canvas></div></div>
+      </div>
+      <div class="card" data-info="Mean learning hours per learner in each module.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Average learning hours</h3><p class="card-sub">hours per learner</p></div></div>
+        <div class="card-body"><div class="chart-box short"><canvas id="hoursBar"></canvas></div></div>
+      </div>
+      <div class="card" data-info="Mean of lessons completed ÷ lessons available.">
+        <div class="card-head"><div class="ttl"><h3 class="card-title">Average lesson progress</h3><p class="card-sub">% of lessons completed</p></div></div>
+        <div class="card-body"><div class="chart-box short"><canvas id="progressBar"></canvas></div></div>
+      </div>
+    </div>
+
+    <div class="section-head" id="deep"><h2>Module deep-dive</h2><span class="line"></span><div class="seg" id="moduleSeg"></div></div>
     <div class="card">
-      <div class="card-head"><div><h3 class="card-title">Module comparison</h3>
-        <p class="card-sub">Sorted by completion rate · bars scale to 100</p></div></div>
-      <div class="table-wrap"><table class="data" id="moduleTable"></table></div>
-    </div>
-
-    <div class="grid g2">
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Completion vs dropout rate</h3>
-          <p class="card-sub">% of learners in each module</p></div></div>
-        <div class="chart-box"><canvas id="compDrop"></canvas></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Completion status mix</h3>
-          <p class="card-sub">100% stacked · share of each status per module</p></div></div>
-        <div class="chart-box"><canvas id="statusMix"></canvas></div>
-      </div>
-    </div>
-
-    <div class="grid g3">
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Average quiz score</h3><p class="card-sub">0–100</p></div></div>
-        <div class="chart-box short"><canvas id="quizBar"></canvas></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Average learning hours</h3><p class="card-sub">hours per learner</p></div></div>
-        <div class="chart-box short"><canvas id="hoursBar"></canvas></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><div><h3 class="card-title">Average lesson progress</h3><p class="card-sub">% of lessons completed</p></div></div>
-        <div class="chart-box short"><canvas id="progressBar"></canvas></div>
-      </div>
-    </div>
-
-    <h2 class="section-title">Module deep-dive</h2>
-    <div class="card">
-      <div class="toolbar" style="justify-content:space-between">
-        <div class="seg" id="moduleSeg"></div>
-        <span class="card-sub" id="deepNote"></span>
-      </div>
-      <div class="stat-strip" id="deepStats"></div>
-      <div class="grid g3" style="margin-bottom:0">
-        <div><h3 class="card-title">Completion status</h3><div class="chart-box short"><canvas id="deepStatus"></canvas></div></div>
-        <div><h3 class="card-title">Engagement level</h3><div class="chart-box short"><canvas id="deepEng"></canvas></div></div>
-        <div><h3 class="card-title">Quiz score distribution</h3><div class="chart-box short"><canvas id="deepHist"></canvas></div></div>
+      <div class="card-body" style="padding-top:16px">
+        <div class="stat-strip" id="deepStats"></div>
+        <div class="grid g3" style="margin:18px 0 0">
+          <div><h3 class="card-title">Completion status</h3><p class="card-sub">selected module</p><div class="chart-box short"><canvas id="deepStatus"></canvas></div></div>
+          <div><h3 class="card-title">Engagement level</h3><p class="card-sub">selected module</p><div class="chart-box short"><canvas id="deepEng"></canvas></div></div>
+          <div><h3 class="card-title">Quiz score distribution</h3><p class="card-sub" id="histSub">% of learners per 10-point band</p><div class="chart-box short"><canvas id="deepHist"></canvas></div></div>
+        </div>
       </div>
     </div>
   </main>
 
   <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
   <script src="assets/data/data.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/charts.js"></script>
+  <script src="assets/js/filters.js"></script>
   <script src="assets/js/pages/modules.js"></script>
 </body>
 </html>
