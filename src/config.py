@@ -9,6 +9,7 @@ computer (Windows / macOS / Linux) without editing file locations.
 
 from pathlib import Path
 
+
 # ---------------------------------------------------------------------------
 # Paths (built relative to this file -> project root is one level above src/)
 # ---------------------------------------------------------------------------
