@@ -70,10 +70,10 @@ DA.ready(function (D) {
   const val = (r, k) => (k === "is_completed" ? (r.completion_status === "Completed" ? 1 : 0) : r[k]);
   function cellColor(v) {
     const dark = document.documentElement.getAttribute("data-theme") === "dark";
-    const neutral = dark ? [32, 37, 44] : [244, 245, 247], pos = dark ? [217, 89, 38] : [196, 80, 31], neg = dark ? [57, 135, 229] : [28, 90, 166];
+    const neutral = dark ? [23, 44, 50] : [242, 248, 249], pos = dark ? [44, 202, 211] : [17, 146, 155], neg = dark ? [127, 131, 242] : [91, 95, 227];
     const a = isFinite(v) ? Math.min(1, Math.abs(v)) : 0, target = v >= 0 ? pos : neg;
     const rgb = neutral.map((n, i) => Math.round(n + (target[i] - n) * a));
-    return { bg: `rgb(${rgb.join(",")})`, fg: (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255 > 0.6 ? "#101828" : "#ffffff", neutral, pos, neg };
+    return { bg: `rgb(${rgb.join(",")})`, fg: (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255 > 0.6 ? "#1d2b36" : "#ffffff", neutral, pos, neg };
   }
   function renderHeatmap() {
     const cols = VARS.map(([k]) => rows.map((r) => val(r, k)));

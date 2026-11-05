@@ -2,8 +2,8 @@
 DA.ready(function (D) {
   const steps = [
     ["database", "Generate / reuse data", "src/generate_data.py: reuses dataset/online_learning.csv if present, otherwise creates 1,000 synthetic learners."],
-    ["sparkles", "Clean", "src/data_cleaning.py: standardise labels, remove duplicates, fix invalid scores, impute missing values with module medians."],
-    ["wand-sparkles", "Engineer features", "src/engagement.py: lesson and video progress, inactivity flag, engagement score and category."],
+    ["eraser", "Clean", "src/data_cleaning.py: standardise labels, remove duplicates, fix invalid scores, impute missing values with module medians."],
+    ["settings-2", "Engineer features", "src/engagement.py: lesson and video progress, inactivity flag, engagement score and category."],
     ["sigma", "Analyse", "src/analysis.py: KPIs, module / device / age summaries and Pearson correlations."],
     ["chart-column", "Visualise", "src/visualization.py: 8 PNG charts for the report and the notebook."],
     ["file-text", "Explain", "src/insights.py + src/report.py: insights, recommendations and the academic report."],

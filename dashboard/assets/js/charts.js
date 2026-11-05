@@ -16,9 +16,9 @@
     return {
       dark, text: c("--text"), text2: c("--text-2"), text3: c("--text-3"), grid: c("--grid"), surface: c("--surface"),
       border: c("--border"), accent: c("--accent"), series,
-      status: { Completed: series[0], "In Progress": series[1], Dropped: series[2] },
+      status: { Completed: series[0], "In Progress": series[1], Dropped: series[3] },
       eng: { Low: c("--eng-low"), Medium: c("--eng-med"), High: c("--eng-high") },
-      muted: dark ? "#323844" : "#d6dbe3",
+      muted: dark ? "#2a4249" : "#d3e6e8",
     };
   };
 
@@ -37,20 +37,31 @@
     d.font.size = 12;
     d.responsive = true;
     d.maintainAspectRatio = false;
-    d.animation.duration = 900;
-    d.animation.easing = "easeOutQuart";
-    Object.assign(d.plugins.legend.labels, { usePointStyle: true, pointStyle: "circle", boxWidth: 7, boxHeight: 7, padding: 14, color: k.text2 });
+    d.animation.duration = 1100;
+    d.animation.easing = "easeOutCubic";
+    d.transitions.active.animation.duration = 250;
+    Object.assign(d.plugins.legend.labels, { usePointStyle: true, pointStyle: "circle", boxWidth: 7, boxHeight: 7, padding: 16, color: k.text2 });
     Object.assign(d.plugins.tooltip, {
-      backgroundColor: "rgba(16, 24, 40, 0.95)", titleColor: "#fff", bodyColor: "#d0d5dd", footerColor: "#98a2b3", padding: 11,
-      cornerRadius: 8, boxPadding: 4, usePointStyle: true, titleFont: { weight: "600", size: 12.5 }, bodyFont: { size: 12 },
-      borderColor: "rgba(255,255,255,.08)", borderWidth: 1, caretSize: 5,
+      backgroundColor: k.surface, titleColor: k.text, bodyColor: k.text2, footerColor: k.text3, padding: 12,
+      cornerRadius: 12, boxPadding: 5, usePointStyle: true, titleFont: { weight: "700", size: 12.5 }, bodyFont: { size: 12 },
+      borderColor: k.border, borderWidth: 1, caretSize: 6, displayColors: true,
     });
     d.scale.grid.color = k.grid;
     d.scale.grid.tickColor = "transparent";
     if (d.scale.border) d.scale.border.display = false;
     d.scale.ticks.color = k.text3;
     d.scale.ticks.padding = 6;
-    d.elements.bar.borderRadius = 5;
+    d.elements.bar.borderRadius = 8;
+    d.elements.line.tension = 0.42;
+    d.elements.line.borderWidth = 2.5;
+    d.elements.line.borderCapStyle = "round";
+    d.elements.point.radius = 0;
+    d.elements.point.hoverRadius = 5;
+    d.elements.point.hoverBorderWidth = 2;
+    d.elements.point.hoverBorderColor = k.surface;
+    d.elements.arc.borderColor = k.surface;
+    d.elements.arc.borderWidth = 3;
+    d.elements.arc.borderRadius = 6;
     d.interaction = { mode: "nearest", intersect: true };
   }
 
@@ -201,12 +212,12 @@
   };
 
   DA.barDataset = (label, data, color, extra = {}) => Object.assign({
-    label, data, backgroundColor: color, hoverBackgroundColor: color, borderRadius: 5, borderSkipped: "start",
-    maxBarThickness: 44, borderWidth: 0, categoryPercentage: 0.72, barPercentage: 0.88,
+    label, data, backgroundColor: color, hoverBackgroundColor: color, borderRadius: 8, borderSkipped: "start",
+    maxBarThickness: 36, borderWidth: 0, categoryPercentage: 0.72, barPercentage: 0.88,
   }, extra);
 
   DA.doughnutOptions = (center, sub, tooltipLabel) => ({
-    cutout: "70%",
+    cutout: "76%",
     layout: { padding: 4 },
     animation: { animateRotate: true, duration: 1000 },
     plugins: { legend: { position: "bottom" }, centerText: { text: center, sub }, tooltip: { callbacks: { label: tooltipLabel } } },

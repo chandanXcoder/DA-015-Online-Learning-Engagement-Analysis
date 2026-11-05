@@ -58,7 +58,7 @@ DA.ready(function (D) {
     const m = METRICS[metric];
     DA.$("#crossTitle").textContent = `${m.label} by device × module`;
     const dark = document.documentElement.getAttribute("data-theme") === "dark";
-    const base = dark ? [30, 34, 40] : [240, 245, 252], top = dark ? [140, 188, 245] : [28, 90, 166];
+    const base = dark ? [23, 44, 50] : [236, 248, 249], top = dark ? [139, 228, 233] : [14, 138, 147];
     const cells = M.devices.map((d) => M.modules.map((mod) => {
       const r = rows.filter((l) => l.device_type === d && l.course_module === mod);
       return { n: r.length, v: r.length ? DA.summarise(r)[metric] : NaN };
@@ -70,7 +70,7 @@ DA.ready(function (D) {
       M.devices.map((d, i) => `<div class="hm-label" style="font-weight:600;gap:8px">${DA.icon(DEVICE_ICON[d])}${DA.esc(d)}</div>` + cells[i].map((cell, j) => {
         if (!isFinite(cell.v)) return `<div class="hm-cell" style="background:var(--surface-2);color:var(--text-3)">–</div>`;
         const a = hi > lo ? (cell.v - lo) / (hi - lo) : 0.5, rgb = base.map((b, k) => Math.round(b + (top[k] - b) * a));
-        const fg = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255 > 0.55 ? "#101828" : "#fff";
+        const fg = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255 > 0.55 ? "#1d2b36" : "#fff";
         return `<div class="hm-cell" style="background:rgb(${rgb.join(",")});color:${fg};min-height:54px;transition-delay:${((i + j) * 0.03).toFixed(2)}s"
           title="${d} · ${M.modules[j]}: ${DA.fmt(cell.v)}${m.unit} (n = ${cell.n})"><div style="text-align:center;line-height:1.25">${DA.fmt(cell.v)}${m.unit}<br>
           <span style="font-size:10.5px;font-weight:500;opacity:.8">n = ${cell.n}</span></div></div>`;
