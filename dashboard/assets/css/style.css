@@ -3,7 +3,7 @@
    Design tokens live on :root; dark mode redefines the same tokens.
    ========================================================================== */
 
-/* Palette: teal / indigo / amber on a soft mint canvas. */
+/* Palette: teal / indigo / amber on a soft mint canvas (light theme only). */
 :root {
   color-scheme: light;
   --bg: #e8f5f6;
@@ -50,41 +50,6 @@
   font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #0c191d;
-  --surface: #132429;
-  --surface-2: #172c32;
-  --surface-3: #1d353b;
-  --border: #22393f;
-  --border-strong: #2e4a51;
-  --card-border: #1d3339;
-  --text: #e6f2f3;
-  --text-2: #a7bec3;
-  --text-3: #728a90;
-  --accent: #2ccad3;
-  --accent-hover: #52d7de;
-  --accent-soft: #123a3f;
-  --accent-ring: rgba(44, 202, 211, .3);
-  --nav-bg: #0f2a30;
-  --nav-bg-2: #0b2227;
-  --nav-text: #a6c7cb;
-  --nav-muted: #5f8389;
-  --nav-hover: rgba(255, 255, 255, .06);
-  --nav-active-bg: rgba(44, 202, 211, .16);
-  --nav-active-text: #ffffff;
-  --tip-bg: #0a1619;
-  --good: #3ccb9b;  --good-soft: #0f2b24;
-  --bad: #f2867a;   --bad-soft: #2f1916;
-  --warn: #f3c04f;  --warn-soft: #2c2410;
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .35);
-  --shadow-sm: 0 6px 18px -8px rgba(0, 0, 0, .55);
-  --shadow-md: 0 14px 30px -12px rgba(0, 0, 0, .65);
-  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, .7);
-  --c1: #2ccad3; --c2: #7f83f2; --c3: #f5c04a; --c4: #f2867a; --c5: #5fb0f2;
-  --eng-low: #1f4b51; --eng-med: #2aa8b0; --eng-high: #8be4e9;
-  --grid: #1d3237;
-}
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }

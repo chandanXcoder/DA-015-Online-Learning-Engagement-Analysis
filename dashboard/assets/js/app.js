@@ -69,16 +69,9 @@
     { id: "about", href: "about.html", label: "Methodology", icon: "book-marked", group: "Reports" },
   ];
 
-  /* ---------------- theme ---------------- */
-  function setTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    const btn = DA.$("#themeBtn");
-    if (btn) { btn.innerHTML = DA.icon(theme === "dark" ? "sun" : "moon"); btn.dataset.tip = theme === "dark" ? "Light mode" : "Dark mode"; DA.paintIcons(); }
-  }
+  /* ---------------- theme (light only) ---------------- */
   (function initTheme() {
-    const saved = DA.store.get("da015-theme");
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.setAttribute("data-theme", saved === "light" || saved === "dark" ? saved : prefersDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", "light");
     if (DA.store.get("da015-nav") === "collapsed") document.documentElement.classList.add("pre-collapsed");
   })();
 
@@ -127,7 +120,6 @@
         <div class="top-actions">
           <span class="status-pill"><i></i>Data synced · ${DA.data ? DA.esc(DA.data.meta.generated) : "–"}</span>
           <button class="icon-btn" id="printBtn" data-tip="Print / save as PDF" aria-label="Print">${DA.icon("printer")}</button>
-          <button class="icon-btn" id="themeBtn" aria-label="Toggle theme"></button>
         </div>
       </header>`;
     content.parentNode.insertBefore(main, content);
@@ -147,13 +139,6 @@
       <div class="modal" id="modal" aria-hidden="true"></div>
       <div class="toasts" id="toasts"></div>`);
 
-    setTheme(document.documentElement.getAttribute("data-theme"));
-    DA.$("#themeBtn").addEventListener("click", () => {
-      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      DA.store.set("da015-theme", next);
-      setTheme(next);
-      document.dispatchEvent(new CustomEvent("themechange"));
-    });
     DA.$("#printBtn").addEventListener("click", () => window.print());
     DA.$("#menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
     scrim.addEventListener("click", () => document.body.classList.remove("nav-open"));
