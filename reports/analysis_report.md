@@ -6,6 +6,7 @@
 
 ## Abstract
 
+
 This project analyses the engagement and performance of 1000 online learners across five course modules (Python, Java, SQL, Web Development and Data Analytics). After cleaning a raw dataset of 1012 records, exploratory data analysis showed an overall completion rate of 21.0% and an average quiz score of 53.3. A transparent engagement score combining activity, learning time and lesson progress was defined. SQL had the highest and Java the lowest completion rate, and higher engagement was clearly associated with higher completion and quiz performance. Evidence-based recommendations are proposed to reduce dropout.
 
 ## 1. Introduction
